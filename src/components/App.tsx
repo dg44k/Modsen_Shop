@@ -1,11 +1,15 @@
 import React from "react";
 import Header from "./Header/Header";
+import { Container, GlobalStyles } from "./styled";
 
 const App: React.FC = () => {
   return (
-    <div className="app">
-      <Header />
-    </div>
+    <Container>
+      <GlobalStyles />
+      <div className="app">
+        <Header />
+      </div>
+    </Container>
   );
 };
 
