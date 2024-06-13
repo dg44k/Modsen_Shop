@@ -1,6 +1,5 @@
 import React from "react";
-import SearchIcon from '@/assets/icon_search.svg'
-import CartIcon from '../../assets/icon_cart.svg';
+import IconSvgCart from "@/assets/icon-cart.svg";
 
 const Header: React.FC = () => {
   return (
@@ -12,8 +11,7 @@ const Header: React.FC = () => {
           Shop
         </a>
         <input type="checkbox" className="nav__switch" />
-        <SearchIcon />
-				<CartIcon />
+        <IconSvgCart />
       </nav>
     </header>
   );

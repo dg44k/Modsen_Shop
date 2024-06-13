@@ -33,10 +33,14 @@ export default (env: EnvVariables) => {
           use: "ts-loader",
           exclude: /node_modules/,
         },
-				{
-					test: /\.svg$/,
-					use: ['@svgr/webpack'],
-				},
+        {
+          test: /\.(png|jpg|jpeg|gif)$/i,
+          type: 'asset/resource',
+        },
+        {
+          test: /\.svg$/i,
+          use: ['@svgr/webpack'],
+        },
       ],
     },
     resolve: {
