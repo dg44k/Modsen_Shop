@@ -6,7 +6,9 @@ import Switch from "../Switch/Switch";
 const Header: React.FC = () => {
   return (
     <StyledHeader>
-      <Logo><Span>Modsen S</Span>HOPPE</Logo>
+      <Logo>
+        <Span>Modsen S</Span>HOPPE
+      </Logo>
 
       <nav className="nav">
         <StyledLink href="#" className="nav__shop">
