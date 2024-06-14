@@ -35,11 +35,11 @@ export default (env: EnvVariables) => {
         },
         {
           test: /\.(png|jpg|jpeg|gif)$/i,
-          type: 'asset/resource',
+          type: "asset/resource",
         },
         {
           test: /\.svg$/i,
-          use: ['@svgr/webpack'],
+          use: ["@svgr/webpack"],
         },
       ],
     },
