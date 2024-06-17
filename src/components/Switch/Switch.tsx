@@ -11,11 +11,7 @@ const Switch = ({ checked, onChange }: SwitchProps) => {
   const [isChecked, setIsChecked] = useState(checked);
 
   const handleChange = () => {
-    const newChecked = !isChecked;
-    setIsChecked(newChecked);
-    if (onChange) {
-      onChange(newChecked);
-    }
+    setIsChecked(!isChecked);
   };
 
   return (
@@ -25,7 +21,7 @@ const Switch = ({ checked, onChange }: SwitchProps) => {
         checked={isChecked}
         onChange={handleChange}
       />
-      <SwitchSlider />
+      <SwitchSlider checked={isChecked} />
     </SwitchContainer>
   );
 };

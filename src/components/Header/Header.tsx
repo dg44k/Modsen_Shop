@@ -1,6 +1,13 @@
 import React from "react";
 import IconSvgCart from "@/assets/icon-cart.svg";
-import { Logo, Span, StyledHeader, StyledLink } from "./styled";
+import {
+  Logo,
+  Span,
+  StyledHeader,
+  StyledIconCart,
+  StyledLink,
+  StyledNav,
+} from "./styled";
 import Switch from "../Switch/Switch";
 
 const Header: React.FC = () => {
@@ -10,14 +17,15 @@ const Header: React.FC = () => {
         <Span>Modsen S</Span>HOPPE
       </Logo>
 
-      <nav className="nav">
+      <StyledNav className="nav">
         <StyledLink href="#" className="nav__shop">
           Shop
         </StyledLink>
-        {/* <input type="checkbox" className="nav__switch" /> */}
         <Switch checked={true} />
-        <IconSvgCart />
-      </nav>
+        <StyledIconCart>
+          <IconSvgCart className="nav__icon-cart" />
+        </StyledIconCart>
+      </StyledNav>
     </StyledHeader>
   );
 };

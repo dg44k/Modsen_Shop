@@ -7,6 +7,12 @@ export const GlobalStyles = createGlobalStyle`
 		box-sizing: border-box;
 	}
 
+	body, #root {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+
 	body {
 		font-family: "DM Sans", sans-serif;
 		font-size: 16px;
@@ -20,5 +26,7 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-	max-width: 1248px;
-`
+  max-width: 1248px;
+  width: 100%;
+  margin: auto 0;
+`;

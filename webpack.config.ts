@@ -2,6 +2,8 @@ import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import webpack from "webpack";
 import type { Configuration as DevServerConfiguration } from "webpack-dev-server";
+import { plugin } from "typescript-eslint";
+import { current } from "@reduxjs/toolkit";
 
 type Mode = "development" | "production";
 
@@ -39,7 +41,23 @@ export default (env: EnvVariables) => {
         },
         {
           test: /\.svg$/i,
-          use: ["@svgr/webpack"],
+          use: [
+            {
+              loader: "@svgr/webpack",
+              options: {
+                svgoConfig: {
+                  plugins: [
+                    {
+                      name: "convertColors",
+                      params: {
+                        currentColor: true,
+                      },
+                    },
+                  ],
+                },
+              },
+            },
+          ],
         },
       ],
     },
