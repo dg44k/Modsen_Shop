@@ -72,6 +72,7 @@ export default (env: EnvVariables) => {
       ? {
           port: env.port ?? 3000,
           open: true,
+          historyApiFallback: true,
         }
       : undefined,
   };
