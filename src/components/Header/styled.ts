@@ -5,6 +5,8 @@ export const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 15px 0 15px 0;
+
+  line-height: 32p;
 `;
 
 export const StyledNav = styled.nav`
@@ -26,11 +28,7 @@ export const Span = styled.span`
 
 export const StyledLink = styled.a`
   color: #000;
-  transition: 0.3s ease-in-out;
-
-  &:hover {
-    color: #c7c7c7;
-  }
+  font-weight: 500;
 `;
 
 export const StyledIconCart = styled.div`
@@ -38,11 +36,5 @@ export const StyledIconCart = styled.div`
     display: block;
     margin-left: -20px;
     cursor: pointer;
-
-    transition: 0.3s ease-in-out;
-  }
-
-  .nav__icon-cart:hover {
-    color: #c7c7c7;
   }
 `;

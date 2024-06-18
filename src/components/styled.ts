@@ -7,6 +7,10 @@ export const GlobalStyles = createGlobalStyle`
 		box-sizing: border-box;
 	}
 
+	html. body {
+		height: 100%;
+	}
+
 	body, #root {
     width: 100vw;
     display: flex;
@@ -14,10 +18,14 @@ export const GlobalStyles = createGlobalStyle`
   }
 
 	body {
+		// display: flex;
+		// flex-direction: column;
+
 		font-family: "DM Sans", sans-serif;
 		font-size: 16px;
 		font-weight: 400;
 		font-style: normal;
+		line-height: 27px;
 	}
 
 	a {
@@ -29,4 +37,8 @@ export const Container = styled.div`
   max-width: 1248px;
   width: 100%;
   margin: auto 0;
+
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100%;
 `;
