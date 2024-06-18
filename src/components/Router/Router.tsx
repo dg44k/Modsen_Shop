@@ -1,16 +1,20 @@
 import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "../App";
+import HomePage from "@/pages/Home/HomePage";
+import ErrorNotFound from "@/pages/ErrorNotFound/ErrorNotFound";
 
 const Router: React.FC = () => {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <App />,
+      errorElement: <ErrorNotFound />,
       children: [
         {
-          path: "/kip",
-          element: <div>Hello</div>,
+          path: "/",
+          index: true,
+          element: <HomePage />,
         },
       ],
     },

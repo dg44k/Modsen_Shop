@@ -6,11 +6,13 @@ import { Outlet } from "react-router-dom";
 
 const App: React.FC = () => {
   return (
-    <Container>
+    <Container className="container">
       <GlobalStyles />
       <>
         <Header />
-        <Outlet />
+        <main>
+          <Outlet />
+        </main>
         <Footer />
       </>
     </Container>

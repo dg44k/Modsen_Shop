@@ -7,7 +7,7 @@ export const GlobalStyles = createGlobalStyle`
 		box-sizing: border-box;
 	}
 
-	html. body {
+	html. body, .container {
 		height: 100%;
 	}
 
@@ -18,14 +18,15 @@ export const GlobalStyles = createGlobalStyle`
   }
 
 	body {
-		// display: flex;
-		// flex-direction: column;
-
 		font-family: "DM Sans", sans-serif;
 		font-size: 16px;
 		font-weight: 400;
 		font-style: normal;
 		line-height: 27px;
+	}
+
+	main {
+		flex: 1 0 auto;
 	}
 
 	a {
@@ -34,11 +35,10 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
   max-width: 1248px;
   width: 100%;
-  margin: auto 0;
-
-  display: grid;
-  grid-template-rows: 1fr auto;
-  height: 100%;
+  height: 100vh;
+	padding-bottom: 10px;s
 `;
