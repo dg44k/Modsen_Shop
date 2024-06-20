@@ -32,6 +32,11 @@ export const GlobalStyles = createGlobalStyle`
 	a {
 		text-decoration: none;
 	}
+
+	h1 {
+		font-size: 33px;
+		font-weight: 500;
+	}
 `;
 
 export const Container = styled.div`
@@ -40,5 +45,5 @@ export const Container = styled.div`
   max-width: 1248px;
   width: 100%;
   height: 100vh;
-	padding-bottom: 10px;s
+  padding: 0 5px 10px 5px;
 `;
