@@ -17,7 +17,7 @@ const productsSlice = createSlice({
   extraReducers: builder => {
     builder.addMatcher(
       api.endpoints.getProducts.matchFulfilled,
-      (state, action: PayloadAction<ProductType[]>) => {
+      (state: ProductsState, action: PayloadAction<ProductType[]>) => {
         state.products = action.payload;
       },
     );

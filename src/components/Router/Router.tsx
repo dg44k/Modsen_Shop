@@ -12,7 +12,6 @@ const Router: React.FC = () => {
       errorElement: <ErrorNotFound />,
       children: [
         {
-          path: "/",
           index: true,
           element: <HomePage />,
         },

@@ -10,6 +10,7 @@ export const GlobalStylesForHome = createGlobalStyle`
 export const StyledHeaderMain = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-top: 64px;
 `;
 
 export const StyledLinkViewAll = styled(Link)`

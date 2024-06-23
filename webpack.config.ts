@@ -1,81 +1,26 @@
-import path from "path";
-import HtmlWebpackPlugin from "html-webpack-plugin";
 import webpack from "webpack";
-import type { Configuration as DevServerConfiguration } from "webpack-dev-server";
-import { plugin } from "typescript-eslint";
-import { current } from "@reduxjs/toolkit";
-
-type Mode = "development" | "production";
+import { buildWebpack } from "./config/webpack/build/buildWebpack";
+import { BuildMode, BuildPaths } from "./config/webpack/types/types";
+import path from "path";
 
 interface EnvVariables {
-  mode: Mode;
+  mode: BuildMode;
   port: number;
 }
 
 export default (env: EnvVariables) => {
-  const isDev = env.mode === "development";
-
-  const config: webpack.Configuration = {
-    mode: env.mode ?? "development",
+  const paths: BuildPaths = {
+    html: path.resolve(__dirname, "public", "index.html"),
     entry: path.resolve(__dirname, "src", "main.tsx"),
-    output: {
-      path: path.resolve(__dirname, "dist"),
-      filename: "[name].[contenthash].js",
-      clean: true,
-    },
-    plugins: [
-      new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, "public", "index.html"),
-      }),
-    ],
-    module: {
-      rules: [
-        {
-          test: /\.tsx?$/,
-          use: "ts-loader",
-          exclude: /node_modules/,
-        },
-        {
-          test: /\.(png|jpg|jpeg|gif)$/i,
-          type: "asset/resource",
-        },
-        {
-          test: /\.svg$/i,
-          use: [
-            {
-              loader: "@svgr/webpack",
-              options: {
-                svgoConfig: {
-                  plugins: [
-                    {
-                      name: "convertColors",
-                      params: {
-                        currentColor: true,
-                      },
-                    },
-                  ],
-                },
-              },
-            },
-          ],
-        },
-      ],
-    },
-    resolve: {
-      extensions: [".tsx", ".ts", ".js"],
-      alias: {
-        "@": path.resolve(__dirname, "src"),
-      },
-    },
-    devtool: isDev && "inline-source-map",
-    devServer: isDev
-      ? {
-          port: env.port ?? 3000,
-          open: true,
-          historyApiFallback: true,
-        }
-      : undefined,
+    output: path.resolve(__dirname, "dist"),
+    src: path.resolve(__dirname, "src"),
   };
+
+  const config: webpack.Configuration = buildWebpack({
+    port: env.port ?? 3000,
+    mode: env.mode ?? "development",
+    paths,
+  });
 
   return config;
 };

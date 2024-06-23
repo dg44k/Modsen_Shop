@@ -1,13 +1,20 @@
 import React from "react";
-import SliderList from "./SliderList/SliderList";
+import SliderList from "./components/SliderList/SliderList";
 import { StyledSliderWrapper } from "./styled";
-import SliderDots from "./SliderDots/SliderDots";
+import SliderDots from "./components/SliderDots/SliderDots";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store/index";
+import { ProductType } from "@/types/types";
 
 const SliderHome: React.FC = () => {
+  const products: ProductType[] = useSelector(
+    (state: RootState) => state.products.products,
+  );
+
   return (
     <StyledSliderWrapper>
-      <SliderList />
-      <SliderDots />
+      <SliderList products={products} />
+      <SliderDots products={products} />
     </StyledSliderWrapper>
   );
 };
