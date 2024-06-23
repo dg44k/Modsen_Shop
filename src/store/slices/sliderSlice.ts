@@ -1,4 +1,3 @@
-import { ProductType } from "@/types/types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface SliderState {
@@ -21,4 +20,4 @@ const sliderSlice = createSlice({
 
 export const { setActiveIndex } = sliderSlice.actions;
 
-export default sliderSlice.reducer;
+export const sliderReducer = sliderSlice.reducer;

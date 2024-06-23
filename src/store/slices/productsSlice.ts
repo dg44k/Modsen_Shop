@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import api from "./apiSlice";
+import { api } from "./apiSlice";
 import { ProductType } from "@/types/types";
 
 interface ProductsState {
@@ -24,4 +24,4 @@ const productsSlice = createSlice({
   },
 });
 
-export default productsSlice.reducer;
+export const productsReducer = productsSlice.reducer;
