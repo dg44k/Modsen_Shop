@@ -1,5 +1,5 @@
-import SliderHome from "@/components/SliderHome/SliderHome";
-import React, { useEffect } from "react";
+import SliderHome from "@/components/SliderHome";
+import React from "react";
 import {
   GlobalStylesForHome,
   StyledHeaderMain,

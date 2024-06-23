@@ -10,7 +10,7 @@ import {
   StyledLinks,
   StyledPrivacy,
 } from "./styled";
-import ListIcons from "../ListIcons/ListIcons";
+import ListIcons from "../ListIcons";
 
 const Footer: React.FC = () => {
   return (

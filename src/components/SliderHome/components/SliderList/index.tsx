@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from "react";
-import SliderListItem from "../SliderListItem/SliderListItem";
+import React, { useEffect } from "react";
+import SliderListItem from "../SliderListItem";
 import { StyledSliderList } from "./styled";
-import { ProductType } from "@/types/types";
 import { setActiveIndex } from "@/store/slices/sliderSlice";
 import { RootState } from "@/store/index";
 import { useSelector } from "react-redux";
-
-interface SliderProps {
-  products: ProductType[];
-}
+import { SliderProps } from "../../types";
 
 const SliderList: React.FC<SliderProps> = ({ products }) => {
   const activeIndex = useSelector(

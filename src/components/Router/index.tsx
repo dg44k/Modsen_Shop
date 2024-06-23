@@ -1,8 +1,8 @@
 import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "../App";
-import HomePage from "@/pages/Home/HomePage";
-import ErrorNotFound from "@/pages/ErrorNotFound/ErrorNotFound";
+import HomePage from "@/pages/Home/index";
+import ErrorNotFound from "@/pages/ErrorNotFound/index";
 
 const Router: React.FC = () => {
   const router = createBrowserRouter([

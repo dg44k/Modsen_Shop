@@ -8,7 +8,7 @@ import {
   StyledLink,
   StyledNav,
 } from "./styled";
-import Switch from "../Switch/Switch";
+import Switch from "../Switch";
 
 const Header: React.FC = () => {
   return (

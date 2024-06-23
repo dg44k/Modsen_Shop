@@ -2,12 +2,8 @@ import React from "react";
 import { StyledSliderDot, StyledSliderDots } from "./styled";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
-import { ProductType } from "@/types/types";
 import { setActiveIndex } from "@/store/slices/sliderSlice";
-
-interface SliderDotsProps {
-  products: ProductType[];
-}
+import { SliderDotsProps } from "../../types";
 
 const SliderDots: React.FC<SliderDotsProps> = ({ products }) => {
   const activeIndex = useSelector(

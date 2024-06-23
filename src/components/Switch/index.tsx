@@ -1,13 +1,8 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { FC, useState } from "react";
 import { SwitchContainer, SwitchInput, SwitchSlider } from "./styled";
+import { SwitchProps } from "./types";
 
-interface SwitchProps {
-  checked: boolean;
-  onChange?: (checked: boolean) => void;
-}
-
-const Switch = ({ checked, onChange }: SwitchProps) => {
+const Switch: FC = ({ checked, onChange }: SwitchProps) => {
   const [isChecked, setIsChecked] = useState(checked);
 
   const handleChange = () => {
