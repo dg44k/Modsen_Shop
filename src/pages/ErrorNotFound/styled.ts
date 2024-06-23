@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const StyledFlexHeadings = styled.div`
@@ -7,23 +8,23 @@ export const StyledFlexHeadings = styled.div`
   justify-content: center;
   flex: 1 0 auto;
   margin: 0 auto;
+`;
 
-  .error__link {
-    width: 100%;
-    max-width: 180px;
-    align-self: center;
-    text-align: center;
-    border: 1px solid #000;
-    border-radius: 4px;
-    color: #000;
-    font-weight: 700;
-    padding: 10px 25px;
-    margin-top: 64px;
+export const LinkToHome = styled(Link)`
+  width: 100%;
+  max-width: 180px;
+  align-self: center;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 4px;
+  color: #000;
+  font-weight: 700;
+  padding: 10px 25px;
+  margin-top: 64px;
 
-    transition: 0.3s ease-in-out;
-  }
+  transition: 0.3s ease-in-out;
 
-  .error__link:hover {
+  &:hover {
     color: #fff;
     background-color: #000;
   }

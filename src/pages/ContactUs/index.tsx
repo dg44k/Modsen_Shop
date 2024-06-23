@@ -18,7 +18,7 @@ const ContactUs: FC = () => {
         <br /> your ideas with our Team!
       </StyledContactUsHeadingThree>
 
-      <StyledGridBlockInput className="list-inputs">
+      <StyledGridBlockInput>
         <Input type="text" placeholder="First Name" />
         <Input type="text" placeholder="Last Name" />
         <Input type="email" placeholder="Email" />

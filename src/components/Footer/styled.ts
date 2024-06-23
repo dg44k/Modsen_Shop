@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
 export const StyledFooter = styled.footer`
@@ -24,7 +25,7 @@ export const StyledLinks = styled.div`
   align-items: center;
 `;
 
-export const StyledAdditionalLink = styled.a`
+export const StyledAdditionalLink = styled(Link)`
   color: #707070;
   text-transform: uppercase;
   cursor: pointer;

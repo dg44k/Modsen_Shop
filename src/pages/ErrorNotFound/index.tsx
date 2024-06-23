@@ -4,6 +4,7 @@ import React, { FC } from "react";
 import { Link } from "react-router-dom";
 import { Container, GlobalStyles } from "@/components/styled";
 import {
+  LinkToHome,
   StyledFlexHeadings,
   StyledHeadingOne,
   StyledHeadingThree,
@@ -20,9 +21,7 @@ const ErrorNotFound: FC = () => {
           This page not found;
           <br /> back to home and start again
         </StyledHeadingThree>
-        <Link to="/" className="error__link">
-          HOMEPAGE
-        </Link>
+        <LinkToHome to="/">HOMEPAGE</LinkToHome>
       </StyledFlexHeadings>
       <Footer />
     </Container>

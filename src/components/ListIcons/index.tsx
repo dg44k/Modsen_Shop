@@ -7,7 +7,7 @@ import IconSVGTwitter from "@/assets/icon-twitter.svg";
 
 const ListIcons: FC = () => {
   return (
-    <StyledIcons className="footer__list-links-social-media">
+    <StyledIcons>
       <IconSVGLinkedIn className="icon-link" />
       <IconSVGFacebook className="icon-link" />
       <IconSVGInstagram className="icon-link" />

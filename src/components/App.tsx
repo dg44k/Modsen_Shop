@@ -9,7 +9,7 @@ const App: FC = () => {
   useGetProductsQuery(undefined);
 
   return (
-    <Container className="container">
+    <Container>
       <GlobalStyles />
       <>
         <Header />

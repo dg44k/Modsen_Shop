@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
@@ -26,13 +27,13 @@ export const Span = styled.span`
   color: #a18a68;
 `;
 
-export const StyledLink = styled.a`
+export const StyledLink = styled(Link)`
   color: #000;
   font-weight: 500;
 `;
 
 export const StyledIconCart = styled.div`
-  .nav__icon-cart {
+  .icon-cart {
     display: block;
     margin-left: -20px;
     cursor: pointer;

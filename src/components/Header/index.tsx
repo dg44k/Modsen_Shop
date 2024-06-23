@@ -17,13 +17,11 @@ const Header: FC = () => {
         <Span>Modsen S</Span>HOPPE
       </Logo>
 
-      <StyledNav className="nav">
-        <StyledLink href="#" className="nav__shop">
-          Shop
-        </StyledLink>
+      <StyledNav>
+        <StyledLink to="/shop">Shop</StyledLink>
         <Switch checked />
         <StyledIconCart>
-          <IconSvgCart className="nav__icon-cart" />
+          <IconSvgCart className="icon-cart" />
         </StyledIconCart>
       </StyledNav>
     </StyledHeader>
