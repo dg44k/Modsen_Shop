@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import {
   Button,
   Input,
@@ -9,7 +9,7 @@ import {
   TextArea,
 } from "./styled";
 
-const ContactUs: React.FC = () => {
+const ContactUs: FC = () => {
   return (
     <StyledContactUs>
       <StyledContactUsHeadingOne>Contact Us</StyledContactUsHeadingOne>

@@ -1,10 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import HomePage from "@/pages/Home/index";
 import ErrorNotFound from "@/pages/ErrorNotFound/index";
 
-const Router: React.FC = () => {
+const Router: FC = () => {
   const router = createBrowserRouter([
     {
       path: "/",

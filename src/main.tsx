@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import ReactDOM from "react-dom/client";
 import Router from "./components/Router";
 import { Provider } from "react-redux";

@@ -1,11 +1,11 @@
-import React from "react";
+import React, { FC } from "react";
 import { StyledSliderDot, StyledSliderDots } from "./styled";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
 import { setActiveIndex } from "@/store/slices/sliderSlice";
 import { SliderDotsProps } from "../../types";
 
-const SliderDots: React.FC<SliderDotsProps> = ({ products }) => {
+const SliderDots: FC<SliderDotsProps> = ({ products }) => {
   const activeIndex = useSelector(
     (state: RootState) => state.slider.activeIndex,
   );

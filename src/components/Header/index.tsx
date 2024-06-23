@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import IconSvgCart from "@/assets/icon-cart.svg";
 import {
   Logo,
@@ -10,7 +10,7 @@ import {
 } from "./styled";
 import Switch from "../Switch";
 
-const Header: React.FC = () => {
+const Header: FC = () => {
   return (
     <StyledHeader>
       <Logo>
@@ -21,7 +21,7 @@ const Header: React.FC = () => {
         <StyledLink href="#" className="nav__shop">
           Shop
         </StyledLink>
-        <Switch checked={true} />
+        <Switch checked />
         <StyledIconCart>
           <IconSvgCart className="nav__icon-cart" />
         </StyledIconCart>

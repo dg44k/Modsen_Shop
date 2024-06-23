@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import {
   StyledAbout,
   StyledAdditionalLink,
@@ -12,7 +12,7 @@ import {
 } from "./styled";
 import ListIcons from "../ListIcons";
 
-const Footer: React.FC = () => {
+const Footer: FC = () => {
   return (
     <StyledFooter className="footer">
       <div className="footer__additional-info">

@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import React from "react";
+import React, { FC } from "react";
 import { Link } from "react-router-dom";
 import { Container, GlobalStyles } from "@/components/styled";
 import {
@@ -9,7 +9,7 @@ import {
   StyledHeadingThree,
 } from "./styled";
 
-const ErrorNotFound: React.FC = () => {
+const ErrorNotFound: FC = () => {
   return (
     <Container>
       <GlobalStyles />

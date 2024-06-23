@@ -1,12 +1,12 @@
 import SliderHome from "@/components/SliderHome";
-import React from "react";
+import React, { FC } from "react";
 import {
   GlobalStylesForHome,
   StyledHeaderMain,
   StyledLinkViewAll,
 } from "./styled";
 
-const HomePage: React.FC = () => {
+const HomePage: FC = () => {
   return (
     <div>
       <GlobalStylesForHome />

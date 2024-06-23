@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 import { StyledSlideImage } from "./styled";
 import { SliderListItemProps } from "../../types";
 
-const SliderListItem: React.FC<SliderListItemProps> = props => {
+const SliderListItem: FC<SliderListItemProps> = props => {
   return (
     <div>
       <StyledSlideImage src={props.image} alt={props.alt} />
