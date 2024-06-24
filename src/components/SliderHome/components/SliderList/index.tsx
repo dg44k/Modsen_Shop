@@ -2,23 +2,23 @@ import React, { FC, useEffect } from "react";
 import SliderListItem from "../SliderListItem/index";
 import { StyledSliderList } from "./styled";
 import { setActiveIndex } from "@/store/slices/sliderSlice";
-import { RootState } from "@/store/index";
-import { useSelector } from "react-redux";
+import { AppDispatch, RootState } from "@/store/index";
+import { useDispatch, useSelector } from "react-redux";
 import { SliderProps } from "../../types";
 
-const SliderList: FC<SliderProps> = ({ products }) => {
+const SliderList: FC<SliderProps> = ({ slides }) => {
   const activeIndex = useSelector(
     (state: RootState) => state.slider.activeIndex,
   );
-  const slides = products.slice(0, 7);
+  const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex(activeIndex + 1);
+      dispatch(setActiveIndex((activeIndex + 1) % slides.length));
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [slides.length]);
+  }, [activeIndex, dispatch, slides.length]);
 
   return (
     <StyledSliderList>

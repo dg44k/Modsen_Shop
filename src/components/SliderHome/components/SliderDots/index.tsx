@@ -1,15 +1,12 @@
 import React, { FC } from "react";
 import { StyledSliderDot, StyledSliderDots } from "./styled";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "@/store";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "@/store";
 import { setActiveIndex } from "@/store/slices/sliderSlice";
 import { SliderDotsProps } from "../../types";
 
-const SliderDots: FC<SliderDotsProps> = ({ products }) => {
-  const activeIndex = useSelector(
-    (state: RootState) => state.slider.activeIndex,
-  );
-  const dispatch = useDispatch();
+const SliderDots: FC<SliderDotsProps> = ({ slides }) => {
+  const dispatch = useDispatch<AppDispatch>();
 
   const handleDotClick = (index: number) => {
     dispatch(setActiveIndex(index));
@@ -17,11 +14,8 @@ const SliderDots: FC<SliderDotsProps> = ({ products }) => {
 
   return (
     <StyledSliderDots>
-      {products.map(product => (
-        <StyledSliderDot
-          key={product.id}
-          onClick={() => handleDotClick(product.id)}
-        />
+      {slides.map((slide, index) => (
+        <StyledSliderDot key={slide.id} onClick={() => handleDotClick(index)} />
       ))}
     </StyledSliderDots>
   );

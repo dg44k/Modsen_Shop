@@ -1,12 +1,15 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import { SwitchContainer, SwitchInput, SwitchSlider } from "./styled";
-import { SwitchProps } from "./types";
+import { setIsChecked } from "@/store/slices/switchSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "@/store/index";
 
-const Switch: FC = ({ checked, onChange }: SwitchProps) => {
-  const [isChecked, setIsChecked] = useState(checked);
+const Switch: FC = () => {
+  const isChecked = useSelector((state: RootState) => state.switch.checked);
+  const dispatch = useDispatch<AppDispatch>();
 
   const handleChange = () => {
-    setIsChecked(!isChecked);
+    dispatch(setIsChecked(!isChecked));
   };
 
   return (

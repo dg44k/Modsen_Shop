@@ -1,11 +1,11 @@
 import { ProductType } from "@/types/types";
 
 export interface SliderDotsProps {
-  products: ProductType[];
+  slides: ProductType[];
 }
 
 export interface SliderProps {
-  products: ProductType[];
+  slides: ProductType[];
 }
 
 export interface SliderListItemProps {
