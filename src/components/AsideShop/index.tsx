@@ -19,7 +19,7 @@ const AsideShop: FC = () => {
         </WrapperSearchStyled>
         <div>
           <div className="dropdown">
-            <button className="dropbtn">Выпадающий</button>
+            <button className="dropbtn">Sort By</button>
             <div className="dropdown-content">
               <input type="checkbox" name="" id="" />
               <input type="checkbox" name="" id="" />
@@ -31,7 +31,7 @@ const AsideShop: FC = () => {
             </div>
           </div>
           <div className="dropdown">
-            <button className="dropbtn">Выпадающий</button>
+            <button className="dropbtn">Shop By</button>
             <div className="dropdown-content">
               <input type="checkbox" name="" id="" />
               <input type="checkbox" name="" id="" />

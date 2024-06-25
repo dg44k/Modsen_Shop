@@ -7,12 +7,13 @@ export const WrapperAsideStyled = styled.div`
 `;
 
 export const WrapperSearchStyled = styled.div`
-  position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   max-width: 250px;
   border-bottom: 1px #d8d8d8 solid;
   padding: 10px 0;
+  margin-bottom: 40px;
 `;
 
 export const InputSearchStyled = styled.input`
@@ -20,7 +21,6 @@ export const InputSearchStyled = styled.input`
   outline: none;
   font-size: 14px;
   color: #707070;
-  width: 360px;
   padding-right: 30px;
 
   &::-webkit-search-cancel-button {

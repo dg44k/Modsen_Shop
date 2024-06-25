@@ -12,7 +12,7 @@ const HomePage: FC = () => {
       <GlobalStylesForHome />
       <SliderHome />
       <StyledHeaderMain>
-        <h1 className="home__heading">Shop The Latest</h1>
+        <h1>Shop The Latest</h1>
         <StyledLinkViewAll to="/shop">View All</StyledLinkViewAll>
       </StyledHeaderMain>
     </div>
