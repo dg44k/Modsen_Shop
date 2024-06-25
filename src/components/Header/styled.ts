@@ -39,5 +39,6 @@ export const StyledIconCart = styled.div`
     display: block;
     margin-left: -20px;
     cursor: pointer;
+    width: 50px;
   }
 `;
