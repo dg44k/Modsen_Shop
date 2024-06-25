@@ -13,7 +13,7 @@ import Switch from "../Switch";
 const Header: FC = () => {
   return (
     <StyledHeader>
-      <Logo>
+      <Logo to="/">
         <Span>Modsen S</Span>HOPPE
       </Logo>
 

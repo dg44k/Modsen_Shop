@@ -5,16 +5,17 @@ import {
   CardPriceStyled,
   CardTitleStyled,
   CardWrapperStyled,
+  WrapperInfoCardStyled,
 } from "./styled";
 
 const Card: FC<CardProps> = props => {
   return (
     <CardWrapperStyled>
       <CardImageStyled src={props.image} alt={props.alt} />
-      <div>
+      <WrapperInfoCardStyled>
         <CardTitleStyled>{props.title}</CardTitleStyled>
         <CardPriceStyled>$ {props.price}</CardPriceStyled>
-      </div>
+      </WrapperInfoCardStyled>
     </CardWrapperStyled>
   );
 };

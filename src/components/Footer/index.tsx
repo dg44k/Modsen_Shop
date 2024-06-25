@@ -11,12 +11,13 @@ import {
   StyledPrivacy,
 } from "./styled";
 import ListIcons from "../ListIcons";
+import { Link } from "react-router-dom";
 
 const Footer: FC = () => {
   return (
     <StyledFooter>
-      <div className="footer__additional-info">
-        <StyledAbout className="footer__about">
+      <div>
+        <StyledAbout>
           <StyledFlexLinks>
             <StyledAdditionalLink to="/contact-us">
               CONTACT US
@@ -39,8 +40,8 @@ const Footer: FC = () => {
         </StyledAbout>
         <StyledLinks>
           <StyledPrivacy>
-            &#169; 2023 Shelly. <a href="#">Terms of use</a> and{" "}
-            <a href="#">privacy policy</a>.
+            &#169; 2023 Shelly. <Link to="/">Terms of use</Link> and{" "}
+            <Link to="/">privacy policy</Link>.
           </StyledPrivacy>
           <ListIcons />
         </StyledLinks>

@@ -12,15 +12,17 @@ export const StyledHeader = styled.header`
 
 export const StyledNav = styled.nav`
   display: flex;
+  align-items: center;
   gap: 60px;
 `;
 
-export const Logo = styled.a`
+export const Logo = styled(Link)`
   font-family: "Allerta Stencil", sans-serif;
   font-size: 35px;
   font-weight: 400;
   font-style: normal;
   cursor: pointer;
+  color: #000;
 `;
 
 export const Span = styled.span`
