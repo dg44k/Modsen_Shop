@@ -3,11 +3,13 @@ import styled from "styled-components";
 export const CardWrapperStyled = styled.div`
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 `;
 
 export const CardImageStyled = styled.img`
+  height: auto;
   width: 100%;
-	object-fit: cover;s
+  max-width: 200px;
 `;
 
 export const CardTitleStyled = styled.p`
