@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 import SliderListItem from "../SliderListItem/index";
 import { StyledSliderList } from "./styled";
 import { setActiveIndex } from "@/store/slices/sliderSlice";
@@ -11,6 +11,10 @@ const SliderList: FC<SliderProps> = ({ slides }) => {
     (state: RootState) => state.slider.activeIndex,
   );
   const dispatch = useDispatch<AppDispatch>();
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  const [startX, setStartX] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -20,15 +24,39 @@ const SliderList: FC<SliderProps> = ({ slides }) => {
     return () => clearInterval(interval);
   }, [activeIndex, dispatch, slides.length]);
 
+  useEffect(() => {
+    if (sliderRef.current) {
+      sliderRef.current.style.transform = `translateX(-${activeIndex * 100}%)`;
+    }
+  }, [activeIndex]);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setStartX(e.touches[0].clientX);
+    setIsDragging(true);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging) return;
+    const diff = startX - e.touches[0].clientX;
+    if (diff > 50) {
+      dispatch(setActiveIndex((activeIndex + 1) % slides.length));
+      setIsDragging(false);
+    } else if (diff < -50) {
+      dispatch(
+        setActiveIndex((activeIndex - 1 + slides.length) % slides.length),
+      );
+      setIsDragging(false);
+    }
+  };
+
   return (
-    <StyledSliderList>
-      {slides.map((slide, index) => (
-        <SliderListItem
-          key={slide.id}
-          isActive={index === activeIndex}
-          image={slide.image}
-          alt={slide.title}
-        />
+    <StyledSliderList
+      ref={sliderRef}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+    >
+      {slides.map(slide => (
+        <SliderListItem key={slide.id} image={slide.image} alt={slide.title} />
       ))}
     </StyledSliderList>
   );

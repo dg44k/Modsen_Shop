@@ -15,14 +15,11 @@ const SliderHome: FC = () => {
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
-    if (products.length > 0) {
-      dispatch(
-        setSliceSlides(products.slice(START_SLICE_SLIDES, END_SLICE_SLIDES)),
-      );
-    }
+    dispatch(
+      setSliceSlides(products.slice(START_SLICE_SLIDES, END_SLICE_SLIDES)),
+    );
   }, [products, dispatch]);
 
-  console.log(sliceSlides);
   return (
     <StyledSliderWrapper>
       <SliderList slides={sliceSlides} />

@@ -9,7 +9,6 @@ export interface SliderProps {
 }
 
 export interface SliderListItemProps {
-  isActive: boolean;
   image: string;
   alt: string;
 }
