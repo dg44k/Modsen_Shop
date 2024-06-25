@@ -1,7 +1,7 @@
 import AsideShop from "@/components/AsideShop";
 import React from "react";
 
-const Shop: React.FC = () => {
+const Shop: FC = () => {
   return (
     <div>
       <AsideShop />

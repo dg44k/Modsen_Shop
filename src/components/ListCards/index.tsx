@@ -1,6 +1,6 @@
 import React from "react";
 
-const ListCards: React.FC = () => {
+const ListCards: FC = () => {
   return <div></div>;
 };
 

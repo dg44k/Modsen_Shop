@@ -1,6 +1,6 @@
-import React from "react";
+import React, { FC } from "react";
 
-const AsideShop: React.FC = () => {
+const AsideShop: FC = () => {
   return <div>ASIDE</div>;
 };
 

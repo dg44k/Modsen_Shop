@@ -1,6 +1,6 @@
 import React from "react";
 
-const DetailCard: React.FC = () => {
+const DetailCard: FC = () => {
   return <div></div>;
 };
 

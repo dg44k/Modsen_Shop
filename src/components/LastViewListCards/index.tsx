@@ -1,6 +1,6 @@
 import React from "react";
 
-const LastViewListCards: React.FC = () => {
+const LastViewListCards: FC = () => {
   return <div></div>;
 };
 
