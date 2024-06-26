@@ -11,7 +11,6 @@ import {
   StyledHeading,
   StyledPrice,
   StyledRatingCount,
-  StyledRatingRate,
   WrapperFlexRatingProduct,
   WrapperFooterInfoCard,
   WrapperHeaderInfoCard,
@@ -19,6 +18,7 @@ import {
   WrapperLinks,
   WrapperRatingProduct,
 } from "./styled";
+import ListStarsRate from "../ListStarsRate";
 
 const InfoDetailProduct: FC<InfoDetailProductProps> = ({ product }) => {
   return (
@@ -29,7 +29,7 @@ const InfoDetailProduct: FC<InfoDetailProductProps> = ({ product }) => {
       </WrapperHeaderInfoCard>
       <WrapperRatingProduct>
         <WrapperFlexRatingProduct>
-          <StyledRatingRate>{product.rating.rate}</StyledRatingRate>
+          <ListStarsRate rate={product.rating.rate} />
           <StyledRatingCount>
             {product.rating.count} customer review
           </StyledRatingCount>

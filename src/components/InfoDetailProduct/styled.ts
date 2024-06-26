@@ -31,9 +31,8 @@ export const WrapperRatingProduct = styled.div`
 export const WrapperFlexRatingProduct = styled.div`
   display: flex;
   gap: 20px;
+  align-items: center;
 `;
-
-export const StyledRatingRate = styled.div``;
 
 export const StyledRatingCount = styled.p`
   color: #707070;

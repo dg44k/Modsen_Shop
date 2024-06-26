@@ -19,8 +19,8 @@ const DetailCard: FC = () => {
       <WrapperInfoBlockCard>
         <GalleryProduct
           listImages={[
-            targetProduct.image,
             ...products.slice(2, 4).map(elem => elem.image),
+            targetProduct.image,
           ]}
           id={targetProduct.id}
           title={targetProduct.title}

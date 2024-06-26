@@ -4,6 +4,7 @@ export const WrapperDescriptionProduct = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: 90px;
 `;
 
 export const DescriptionProductHeading = styled.h3`
