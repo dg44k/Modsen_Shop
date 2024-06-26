@@ -28,7 +28,10 @@ const DetailCard: FC = () => {
         <InfoDetailProduct product={targetProduct} />
       </WrapperInfoBlockCard>
       <DescriptionProduct description={targetProduct.description} />
-      <ListSimilarCard currentCategory={targetProduct.category} />
+      <ListSimilarCard
+        currentCategory={targetProduct.category}
+        currentElementId={targetProduct.id}
+      />
     </WrapperDetailCard>
   );
 };

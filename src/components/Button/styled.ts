@@ -5,7 +5,7 @@ export const StyledButton = styled.button`
   border: 1px solid #000;
   text-transform: uppercase;
   border-radius: 8px;
-  padding: 3px 10px;
+  padding: 4px 10px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 

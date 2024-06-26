@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import {
   BigImageProduct,
   ListMiniImageProducts,
@@ -16,6 +16,11 @@ const GalleryProducts: FC<GalleryProductsProps> = ({
   const [images, setImages] = useState(listImages);
   const [bigImage, setBigImage] = useState(images[images.length - 1]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    setImages(listImages);
+    setBigImage(listImages[listImages.length - 1]);
+  }, [listImages]);
 
   const handleMiniImageClick = (miniImage: string, index: number) => {
     const newImages = [...images];
@@ -38,7 +43,7 @@ const GalleryProducts: FC<GalleryProductsProps> = ({
       <ListMiniImageProducts>
         {images.slice(0, listImages.length - 1).map((image: string, index) => (
           <MiniImageProduct
-            key={id + `${index}`}
+            key={id - index}
             src={image}
             alt={title}
             onClick={() => handleMiniImageClick(image, index)}

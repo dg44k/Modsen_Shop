@@ -5,10 +5,14 @@ import { ListSimilarProductsProps } from "./types";
 import Card from "../Card";
 import { SimpleWrapper, StyledHeading, WrapperSimilarProducts } from "./styled";
 
-const ListSimilarCard: FC<ListSimilarProductsProps> = ({ currentCategory }) => {
+const ListSimilarCard: FC<ListSimilarProductsProps> = ({
+  currentCategory,
+  currentElementId,
+}) => {
   const products = useSelector((state: RootState) => state.products.products);
   const similarProducts = products.filter(
-    product => product.category === currentCategory,
+    product =>
+      product.category === currentCategory && product.id !== currentElementId,
   );
   return (
     <SimpleWrapper>
