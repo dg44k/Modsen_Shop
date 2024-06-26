@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const ProductIconsShow = styled.div`
@@ -28,7 +27,7 @@ export const ProductIconsShow = styled.div`
   }
 `;
 
-export const CardWrapperStyled = styled(Link)`
+export const CardWrapperStyled = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;

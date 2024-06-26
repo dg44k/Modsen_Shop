@@ -3,34 +3,44 @@ import GalleryProduct from "@/components/GalleryProducts";
 import InfoDetailProduct from "@/components/InfoDetailProduct";
 import ListSimilarCard from "@/components/ListSimilarCard";
 import { RootState } from "@/store";
-import { ProductType } from "@/types/types";
 import React, { FC } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { WrapperDetailCard, WrapperInfoBlockCard } from "./styled";
+import {
+  StyledError,
+  StyledLoading,
+  WrapperDetailCard,
+  WrapperInfoBlockCard,
+} from "./styled";
+import { useGetProductQuery } from "@/store/slices/apiSlice";
 
 const DetailCard: FC = () => {
   const { id } = useParams<{ id: string }>();
   const products = useSelector((state: RootState) => state.products.products);
-  const targetProduct = products.find((elem: ProductType) => elem.id === +id);
-
+  const { data, isLoading, isError } = useGetProductQuery(id);
+  if (isLoading) {
+    return <StyledLoading>Loading...</StyledLoading>;
+  }
+  if (isError) {
+    return <StyledError>Error...</StyledError>;
+  }
   return (
     <WrapperDetailCard>
       <WrapperInfoBlockCard>
         <GalleryProduct
           listImages={[
-            ...products.slice(2, 4).map(elem => elem.image),
-            targetProduct.image,
+            ...products.slice(2, 4).map(elem => elem.image), //Чисто для примера добавил, чтобы увидеть работоспособность слайдера
+            data.image,
           ]}
-          id={targetProduct.id}
-          title={targetProduct.title}
+          id={data.id}
+          title={data.title}
         />
-        <InfoDetailProduct product={targetProduct} />
+        <InfoDetailProduct product={data} />
       </WrapperInfoBlockCard>
-      <DescriptionProduct description={targetProduct.description} />
+      <DescriptionProduct description={data.description} />
       <ListSimilarCard
-        currentCategory={targetProduct.category}
-        currentElementId={targetProduct.id}
+        currentCategory={data.category}
+        currentElementId={data.id}
       />
     </WrapperDetailCard>
   );

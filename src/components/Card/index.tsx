@@ -12,21 +12,21 @@ import {
 } from "./styled";
 import { Link } from "react-router-dom";
 
-const Card: FC<CardProps> = props => {
+const Card: FC<CardProps> = ({ id, image, alt, title, price }) => {
   return (
-    <CardWrapperStyled to={`/card/${props.id}`}>
+    <CardWrapperStyled>
       <ProductIconsShow className="card_product-show">
         <Link to="/cart">
           <IconCart className="icon" />
         </Link>
-        <Link to={`/card/${props.id}`}>
+        <Link to={`/card/${id}`}>
           <IconEye className="icon" />
         </Link>
       </ProductIconsShow>
-      <CardImageStyled src={props.image} alt={props.alt} />
+      <CardImageStyled src={image} alt={alt} />
       <WrapperInfoCardStyled>
-        <CardTitleStyled>{props.title}</CardTitleStyled>
-        <CardPriceStyled>$ {props.price}</CardPriceStyled>
+        <CardTitleStyled>{title}</CardTitleStyled>
+        <CardPriceStyled>$ {price}</CardPriceStyled>
       </WrapperInfoCardStyled>
     </CardWrapperStyled>
   );

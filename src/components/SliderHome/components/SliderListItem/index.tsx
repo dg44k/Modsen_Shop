@@ -2,10 +2,10 @@ import React, { FC } from "react";
 import { StyledSlideImage } from "./styled";
 import { SliderListItemProps } from "../../types";
 
-const SliderListItem: FC<SliderListItemProps> = props => {
+const SliderListItem: FC<SliderListItemProps> = ({ image, alt }) => {
   return (
     <div>
-      <StyledSlideImage src={props.image} alt={props.alt} />
+      <StyledSlideImage src={image} alt={alt} />
     </div>
   );
 };

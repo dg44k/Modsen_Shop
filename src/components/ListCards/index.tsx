@@ -1,13 +1,20 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import { ListCardsProps } from "./types";
 import Card from "../Card";
-import { ListCardsStyled } from "./styled";
-import { title } from "process";
+import { ListCardsStyled, StyledError, StyledLoading } from "./styled";
+import { useGetProductsQuery } from "@/store/slices/apiSlice";
 
-const ListCards: FC<ListCardsProps> = ({ products }) => {
+const ListCards: FC<ListCardsProps> = () => {
+  const { data, isLoading, isError } = useGetProductsQuery(undefined);
+  if (isLoading) {
+    return <StyledLoading>Loading...</StyledLoading>;
+  }
+  if (isError) {
+    return <StyledError>Error...</StyledError>;
+  }
   return (
     <ListCardsStyled>
-      {products.map(product => (
+      {data.map(product => (
         <Card
           key={product.id}
           alt={product.title}

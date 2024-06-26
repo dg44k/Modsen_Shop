@@ -7,3 +7,15 @@ export const ListCardsStyled = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-area: list;
 `;
+
+export const StyledLoading = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const StyledError = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
