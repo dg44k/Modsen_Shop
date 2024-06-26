@@ -16,10 +16,10 @@ const Card: FC<CardProps> = props => {
   return (
     <CardWrapperStyled>
       <ProductIconsShow className="card_product-show">
-        <Link to={`/`}>
+        <Link to="/cart">
           <IconCart className="icon" />
         </Link>
-        <Link to={`/`}>
+        <Link to={`/card/${props.id}`}>
           <IconEye className="icon" />
         </Link>
       </ProductIconsShow>

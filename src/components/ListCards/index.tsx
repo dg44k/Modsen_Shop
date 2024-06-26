@@ -7,13 +7,7 @@ const ListCards: FC<ListCardsProps> = ({ products }) => {
   return (
     <ListCardsStyled>
       {products.map(product => (
-        <Card
-          key={product.id}
-          image={product.image}
-          alt={product.title}
-          price={product.price}
-          title={product.title}
-        />
+        <Card key={product.id} alt={product.title} {...product} />
       ))}
     </ListCardsStyled>
   );
