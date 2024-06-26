@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 
 const Card: FC<CardProps> = props => {
   return (
-    <CardWrapperStyled>
+    <CardWrapperStyled to={`/card/${props.id}`}>
       <ProductIconsShow className="card_product-show">
         <Link to="/cart">
           <IconCart className="icon" />

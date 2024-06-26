@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const ProductIconsShow = styled.div`
@@ -27,7 +28,7 @@ export const ProductIconsShow = styled.div`
   }
 `;
 
-export const CardWrapperStyled = styled.div`
+export const CardWrapperStyled = styled(Link)`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -84,6 +85,7 @@ export const CardTitleStyled = styled.p`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: #000;
 `;
 
 export const CardPriceStyled = styled.p`
