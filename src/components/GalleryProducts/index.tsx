@@ -45,13 +45,11 @@ const GalleryProducts: FC<GalleryProductsProps> = ({
           />
         ))}
       </ListMiniImageProducts>
-      <div>
-        <BigImageProduct
-          src={bigImage}
-          alt={title}
-          onClick={handleBigImageClick}
-        />
-      </div>
+      <BigImageProduct
+        src={bigImage}
+        alt={title}
+        onClick={handleBigImageClick}
+      />
       {isModalOpen && (
         <Modal onClick={closeModal}>
           <img src={bigImage} alt={title} />

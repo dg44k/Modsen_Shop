@@ -13,15 +13,13 @@ export const ListMiniImageProducts = styled.div`
 
 export const MiniImageProduct = styled.img`
   cursor: pointer;
-  max-width: 120px;
-  width: 100%;
+  width: 120px;
   object-fit: contain;
 `;
 
 export const BigImageProduct = styled.img`
   cursor: pointer;
-  max-width: 540px;
-  width: 100%;
+  width: 350px;
   object-fit: contain;
 `;
 
