@@ -36,7 +36,6 @@ export const CardWrapperStyled = styled(Link)`
   cursor: pointer;
   max-width: 250px;
   border-radius: 8px;
-  border: 1px solid #000;
   padding: 3px;
 
   transition: 0.3s ease-in-out;

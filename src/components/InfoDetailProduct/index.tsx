@@ -14,11 +14,14 @@ import {
   WrapperFlexRatingProduct,
   WrapperFooterInfoCard,
   WrapperHeaderInfoCard,
+  WrapperInfoCart,
   WrapperInfoDetailProduct,
   WrapperLinks,
   WrapperRatingProduct,
 } from "./styled";
 import ListStarsRate from "../ListStarsRate";
+import CounterProductCart from "../CounterProductCart";
+import Button from "../Button";
 
 const InfoDetailProduct: FC<InfoDetailProductProps> = ({ product }) => {
   return (
@@ -46,6 +49,10 @@ const InfoDetailProduct: FC<InfoDetailProductProps> = ({ product }) => {
         <InfoCategories>
           <BoldCategories>Categories:</BoldCategories> {product.category}
         </InfoCategories>
+        <WrapperInfoCart>
+          <CounterProductCart />
+          <Button>ADD TO CART</Button>
+        </WrapperInfoCart>
       </WrapperFooterInfoCard>
     </WrapperInfoDetailProduct>
   );

@@ -12,6 +12,12 @@ export const WrapperHeaderInfoCard = styled.div`
   margin-bottom: 65px;
 `;
 
+export const WrapperInfoCart = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 30px;
+`;
+
 export const StyledHeading = styled.h2`
   font-size: 26px;
 `;
@@ -25,7 +31,7 @@ export const WrapperRatingProduct = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-bottom: 190px;
+  margin-bottom: 100px;
 `;
 
 export const WrapperFlexRatingProduct = styled.div`
