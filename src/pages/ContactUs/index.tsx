@@ -7,9 +7,16 @@ import {
   StyledContactUsHeadingThree,
   StyledGridBlockInput,
   TextArea,
+  WrapperInput,
 } from "./styled";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import { validationSchema } from "@/utils/helper";
+import { ContactUsType } from "./types";
 
 const ContactUs: FC = () => {
+  const handleSubmit = (values: ContactUsType) => {
+    console.log(values);
+  };
   return (
     <StyledContactUs>
       <StyledContactUsHeadingOne>Contact Us</StyledContactUsHeadingOne>
@@ -18,14 +25,83 @@ const ContactUs: FC = () => {
         <br /> your ideas with our Team!
       </StyledContactUsHeadingThree>
 
-      <StyledGridBlockInput>
-        <Input type="text" placeholder="First Name" />
-        <Input type="text" placeholder="Last Name" />
-        <Input type="email" placeholder="Email" />
-        <Input type="text" placeholder="Subject" />
-        <TextArea placeholder="Message"></TextArea>
-      </StyledGridBlockInput>
-      <Button type="submit">SEND</Button>
+      <Formik
+        initialValues={{
+          firstName: "",
+          lastName: "",
+          email: "",
+          subject: "",
+          message: "",
+        }}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+      >
+        <Form>
+          <StyledGridBlockInput>
+            <WrapperInput>
+              <Field
+                type="text"
+                name="firstName"
+                placeholder="First Name"
+                as={Input}
+              />
+              <ErrorMessage
+                name="firstName"
+                component="div"
+                className="error-message"
+              />
+            </WrapperInput>
+
+            <WrapperInput>
+              <Field
+                type="text"
+                name="lastName"
+                placeholder="Last Name"
+                as={Input}
+              />
+              <ErrorMessage
+                name="lastName"
+                component="div"
+                className="error-message"
+              />
+            </WrapperInput>
+
+            <WrapperInput>
+              <Field type="email" name="email" placeholder="Email" as={Input} />
+              <ErrorMessage
+                name="email"
+                component="div"
+                className="error-message"
+              />
+            </WrapperInput>
+
+            <WrapperInput>
+              <Field
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                as={Input}
+              />
+              <ErrorMessage
+                name="subject"
+                component="div"
+                className="error-message"
+              />
+            </WrapperInput>
+
+            <WrapperInput>
+              <Field name="message" placeholder="Message" as={TextArea} />
+              <ErrorMessage
+                name="message"
+                component="div"
+                className="error-message"
+              />
+            </WrapperInput>
+          </StyledGridBlockInput>
+
+          <Button type="submit">SEND</Button>
+        </Form>
+      </Formik>
     </StyledContactUs>
   );
 };

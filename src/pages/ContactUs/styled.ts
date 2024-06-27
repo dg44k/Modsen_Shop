@@ -1,10 +1,13 @@
+import { Formik } from "formik";
 import styled from "styled-components";
 
-export const StyledContactUs = styled.form`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+export const StyledContactUs = styled.div`
+  & > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   margin: 90px 0;
 `;
 
@@ -63,5 +66,15 @@ export const Button = styled.button`
   &:hover {
     background-color: #fff;
     color: #000;
+  }
+`;
+
+export const WrapperInput = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  .error-message {
+    color: #d82700;
+    font-size: 8px;
   }
 `;
