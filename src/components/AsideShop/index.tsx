@@ -14,7 +14,7 @@ const AsideShop: FC = () => {
         <WrapperSearchStyled>
           <InputSearchStyled type="search" placeholder="Search..." />
           <WrapperIconSearchStyled>
-            <IconSearch className="icon-link" />
+            <IconSearch />
           </WrapperIconSearchStyled>
         </WrapperSearchStyled>
         <div>

@@ -56,7 +56,12 @@ const SliderList: FC<SliderProps> = ({ slides }) => {
       onTouchMove={handleTouchMove}
     >
       {slides.map(slide => (
-        <SliderListItem key={slide.id} image={slide.image} alt={slide.title} />
+        <SliderListItem
+          key={slide.id}
+          image={slide.image}
+          alt={slide.title}
+          id={slide.id}
+        />
       ))}
     </StyledSliderList>
   );

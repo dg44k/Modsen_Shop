@@ -34,8 +34,10 @@ export const StyledLink = styled(Link)`
   font-weight: 500;
 `;
 
-export const StyledIconCart = styled.div`
-  .icon-cart {
+export const StyledIconCart = styled(Link)`
+  color: #000;
+  
+  & > svg {
     display: block;
     margin-left: -20px;
     cursor: pointer;

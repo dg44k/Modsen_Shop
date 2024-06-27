@@ -42,7 +42,7 @@ export const WrapperIconSearchStyled = styled.div`
   display: flex;
   align-items: center;
 
-  .icon-link {
+  & > svg {
     width: 19px;
     cursor: pointer;
   }

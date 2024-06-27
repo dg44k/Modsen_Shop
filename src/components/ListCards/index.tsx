@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react";
+import React, { FC } from "react";
 import { ListCardsProps } from "./types";
 import Card from "../Card";
 import { ListCardsStyled, StyledError, StyledLoading } from "./styled";

@@ -19,9 +19,9 @@ const Header: FC = () => {
 
       <StyledNav>
         <StyledLink to="/shop">Shop</StyledLink>
-        <Switch checked />
-        <StyledIconCart>
-          <IconSvgCart className="icon-cart" />
+        <Switch />
+        <StyledIconCart to="/cart">
+          <IconSvgCart />
         </StyledIconCart>
       </StyledNav>
     </StyledHeader>

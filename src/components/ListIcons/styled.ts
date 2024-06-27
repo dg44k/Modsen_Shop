@@ -1,23 +1,20 @@
 import { styled } from "styled-components";
 
 export const StyledIcons = styled.div`
-  & {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
+
+  & > a {
+    color: #707070;
   }
 
-  .icon-link {
+  & > svg {
     cursor: pointer;
-    color: #707070;
 
     transition: 0.3s ease-in-out;
   }
 
-  .icon-link:hover {
-    color: #000;
-  }
-
-  .icon-link:active {
+  & > a:hover {
     color: #000;
   }
 `;

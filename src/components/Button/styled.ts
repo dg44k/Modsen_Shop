@@ -7,11 +7,19 @@ export const StyledButton = styled.button`
   border-radius: 8px;
   padding: 4px 10px;
   cursor: pointer;
+
   transition: 0.3s ease-in-out;
+
+  & > a {
+    color: #000;
+  }
 
   &:hover {
     border: none;
     background-color: #000;
-    color: #fff;
+
+    & > a {
+      color: #fff;
+    }
   }
 `;

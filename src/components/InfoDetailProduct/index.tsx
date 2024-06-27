@@ -22,6 +22,7 @@ import {
 import ListStarsRate from "../ListStarsRate";
 import CounterProductCart from "../CounterProductCart";
 import Button from "../Button";
+import { Link } from "react-router-dom";
 
 const InfoDetailProduct: FC<InfoDetailProductProps> = ({ product }) => {
   return (
@@ -41,17 +42,27 @@ const InfoDetailProduct: FC<InfoDetailProductProps> = ({ product }) => {
       </WrapperRatingProduct>
       <WrapperFooterInfoCard>
         <WrapperLinks>
-          <IconSVGMail className="icon-link" />
-          <IconSVGFacebook className="icon-link" />
-          <IconSVGInstagram className="icon-link" />
-          <IconSVGTwitter className="icon-link" />
+          <Link to="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDZBRCdHQvpnKPPQSvpLLCRnvtMKSrTXSMkBFQWGwWtRpbgHWkgWmQbDHRRWQNrXVpFJjWWs">
+            <IconSVGMail />
+          </Link>
+          <Link to="https://www.facebook.com/ModsenSoftware/">
+            <IconSVGFacebook />
+          </Link>
+          <Link to="https://www.instagram.com/modsencompany/">
+            <IconSVGInstagram />
+          </Link>
+          <Link to="https://twitter.com/modsencompany?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+            <IconSVGTwitter />
+          </Link>
         </WrapperLinks>
         <InfoCategories>
           <BoldCategories>Categories:</BoldCategories> {product.category}
         </InfoCategories>
         <WrapperInfoCart>
           <CounterProductCart />
-          <Button>ADD TO CART</Button>
+          <Button>
+            <Link to="/shop">ADD TO CART</Link>
+          </Button>
         </WrapperInfoCart>
       </WrapperFooterInfoCard>
     </WrapperInfoDetailProduct>

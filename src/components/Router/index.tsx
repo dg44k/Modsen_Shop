@@ -6,6 +6,7 @@ import ErrorNotFound from "@/pages/ErrorNotFound/index";
 import ContactUs from "@/pages/ContactUs/index";
 import Shop from "@/pages/Shop";
 import DetailCard from "../../pages/DetailCard";
+import Cart from "@/pages/Cart";
 
 const Router: FC = () => {
   const router = createBrowserRouter([
@@ -25,6 +26,10 @@ const Router: FC = () => {
         {
           path: "/shop",
           element: <Shop />,
+        },
+        {
+          path: "/cart",
+          element: <Cart />,
         },
         {
           path: "/card/:id",

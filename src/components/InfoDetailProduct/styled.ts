@@ -58,13 +58,17 @@ export const WrapperLinks = styled.div`
   display: flex;
   gap: 24px;
 
-  & > .icon-link {
-    cursor: pointer;
+  & > a {
     color: #707070;
+  }
+
+  & > svg {
+    cursor: pointer;
+
     transition: 0.3s ease-in-out;
   }
 
-  & > .icon-link:hover {
+  & > a:hover {
     color: #000;
   }
 `;

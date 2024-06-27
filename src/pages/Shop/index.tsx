@@ -1,8 +1,6 @@
 import AsideShop from "@/components/AsideShop";
 import ListCards from "@/components/ListCards";
-import { RootState } from "@/store";
 import React, { FC } from "react";
-import { useSelector } from "react-redux";
 import {
   HeadingShopStyled,
   WrapperContainerShop,

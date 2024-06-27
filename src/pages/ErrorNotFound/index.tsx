@@ -1,7 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import React, { FC } from "react";
-import { Link } from "react-router-dom";
 import { Container, GlobalStyles } from "@/components/styled";
 import {
   LinkToHome,

@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import { SliceCounterValue, WrapperCounter } from "./styled";
+import { ButtonCounter, SliceCounterValue, WrapperCounter } from "./styled";
 
 const CounterProductCart: FC = () => {
   const [countProduct, setCountProduct] = useState(1);
@@ -13,13 +13,11 @@ const CounterProductCart: FC = () => {
 
   return (
     <WrapperCounter>
-      <div className="count-btn" onClick={handleMinusCountProduct}>
-        -
-      </div>
+      <ButtonCounter onClick={handleMinusCountProduct}>-</ButtonCounter>
       <SliceCounterValue>{countProduct}</SliceCounterValue>
-      <div className="count-btn" onClick={handlePlusCountProduct}>
+      <ButtonCounter className="count-btn" onClick={handlePlusCountProduct}>
         +
-      </div>
+      </ButtonCounter>
     </WrapperCounter>
   );
 };

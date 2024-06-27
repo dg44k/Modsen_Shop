@@ -11,4 +11,5 @@ export interface SliderProps {
 export interface SliderListItemProps {
   image: string;
   alt: string;
+  id: number;
 }

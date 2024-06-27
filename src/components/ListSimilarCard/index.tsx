@@ -1,6 +1,4 @@
-import { RootState } from "@/store";
 import React, { FC } from "react";
-import { useSelector } from "react-redux";
 import { ListSimilarProductsProps } from "./types";
 import Card from "../Card";
 import { SimpleWrapper, StyledHeading, WrapperSimilarProducts } from "./styled";
