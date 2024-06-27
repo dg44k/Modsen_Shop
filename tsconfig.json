@@ -11,13 +11,16 @@
     "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "*": ["typings/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": [
-      "src",
-      "typings"
+    "buildDevServer.d.ts",
+    "buildLoaders.d.ts",
+    "buildPlugins.d.ts",
+    "buildResolvers.d.ts",
+    "buildWebpack.d.ts",
+    "declarations.d.ts"
   ],
   "ts-node": {
     "compilerOptions": {
