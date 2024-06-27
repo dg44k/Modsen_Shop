@@ -41,38 +41,6 @@ export const StyledAdditionalLink = styled(Link)`
   }
 `;
 
-export const StyledFormNewsletter = styled.form`
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  border-bottom: 1px #000 solid;
-  padding: 10px 0;
-`;
-
-export const StyledInputNewsletter = styled.input`
-  border: none;
-  outline: none;
-  font-size: 16px;
-  color: #707070;
-  width: 360px;
-  padding-right: 30px;
-`;
-
-export const StyledButtonNewsletter = styled.input`
-  position: absolute;
-  top 0;
-  left: 92%;
-
-  font-size: 30px;
-  font-weight: 600;
-  cursor: pointer;
-  border: none;
-  background: none;
-  color: #707070;
-  padding-bottom: 8px;
-`;
-
 export const StyledPrivacy = styled.p`
   & > a {
     color: #707070;

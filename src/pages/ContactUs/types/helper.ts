@@ -1,4 +1,4 @@
-import { ContactUsType } from "@/pages/ContactUs/types";
+import { ContactUsType } from "@/pages/ContactUs/types/types";
 import * as yup from "yup";
 
 export const initialValue: ContactUsType = {

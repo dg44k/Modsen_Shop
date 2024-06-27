@@ -2,16 +2,14 @@ import React, { FC } from "react";
 import {
   StyledAbout,
   StyledAdditionalLink,
-  StyledButtonNewsletter,
   StyledFlexLinks,
   StyledFooter,
-  StyledFormNewsletter,
-  StyledInputNewsletter,
   StyledLinks,
   StyledPrivacy,
 } from "./styled";
 import ListIcons from "../ListIcons";
 import { Link } from "react-router-dom";
+import Newsletter from "../Newsletter";
 
 const Footer: FC = () => {
   return (
@@ -29,14 +27,7 @@ const Footer: FC = () => {
               SHIPPING AND RETURNS
             </StyledAdditionalLink>
           </StyledFlexLinks>
-
-          <StyledFormNewsletter>
-            <StyledInputNewsletter
-              type="email"
-              placeholder="Give an email, get the newsletter."
-            />
-            <StyledButtonNewsletter type="submit" value="&#8594;" />
-          </StyledFormNewsletter>
+          <Newsletter />
         </StyledAbout>
         <StyledLinks>
           <StyledPrivacy>

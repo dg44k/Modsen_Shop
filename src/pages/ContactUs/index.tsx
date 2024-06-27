@@ -10,8 +10,8 @@ import {
   WrapperInput,
 } from "./styled";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { validationSchema } from "@/utils/helper";
-import { ContactUsType } from "./types";
+import { initialValue, validationSchema } from "@/pages/ContactUs/types/helper";
+import { ContactUsType } from "./types/types";
 
 const ContactUs: FC = () => {
   const handleSubmit = (values: ContactUsType) => {
@@ -26,13 +26,7 @@ const ContactUs: FC = () => {
       </StyledContactUsHeadingThree>
 
       <Formik
-        initialValues={{
-          firstName: "",
-          lastName: "",
-          email: "",
-          subject: "",
-          message: "",
-        }}
+        initialValues={initialValue}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
