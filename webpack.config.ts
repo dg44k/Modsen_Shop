@@ -1,5 +1,5 @@
 import webpack from "webpack";
-// import { buildWebpack } from "./config/build/buildWebpack";
+import { buildWebpack } from "./config/build/buildWebpack";
 import { BuildMode, BuildPaths } from "./config/types/types";
 import path from "path";
 
@@ -11,28 +11,6 @@ import { buildLoaders } from "./config/build/buildLoaders";
 import { buildPlugins } from "./config/build/buildPlugins";
 import { buildResolvers } from "./config/build/buildResolvers";
 import { BuildOptions } from "./config/types/types";
-
-export function buildWebpack(options: BuildOptions): WebpackConfiguration {
-  const isDev = options.mode === "development";
-
-  return {
-    mode: options.mode ?? "development",
-    entry: options.paths.entry,
-    output: {
-      path: options.paths.output,
-      filename: "[name].[contenthash].js",
-      clean: true,
-      publicPath: "/",
-    },
-    plugins: buildPlugins(options),
-    module: {
-      rules: buildLoaders(options),
-    },
-    resolve: buildResolvers(options),
-    devtool: isDev && "inline-source-map",
-    devServer: isDev ? buildDevServer(options) : undefined,
-  };
-}
 
 interface EnvVariables {
   mode: BuildMode;
