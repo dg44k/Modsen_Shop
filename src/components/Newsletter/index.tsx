@@ -1,16 +1,43 @@
-import React, { FC } from "react";
+import React, { FC, FormEvent, FormEventHandler, useRef } from "react";
 import {
   StyledButtonNewsletter,
   StyledFormNewsletter,
   StyledInputNewsletter,
   WrapperInput,
 } from "./styled";
-import { ErrorMessage, Field, Form, Formik } from "formik";
+import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
 import { NewsletterType, initialValues, validationSchema } from "./helper";
+import emailjs from "@emailjs/browser";
 
 const Newsletter: FC = () => {
-  const handleSubmit = (values: NewsletterType) => {
-    console.log(values);
+  const sendEmail = (email: string) => {
+    const templateParams = {
+      to_email: email,
+    };
+
+    emailjs
+      .send(
+        "service_9fo7658",
+        "template_4pesupm",
+        templateParams,
+        "b6nkFTP3yW606TrTP",
+      )
+      .then(
+        response => {
+          console.log("Email sent!", response.status, response.text);
+        },
+        error => {
+          console.error("Email sending failed:", error);
+        },
+      );
+  };
+
+  const handleSubmit = (
+    values: NewsletterType,
+    { resetForm }: FormikHelpers<NewsletterType>,
+  ) => {
+    sendEmail(values.email);
+    resetForm();
   };
 
   return (
