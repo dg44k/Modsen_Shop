@@ -1,16 +1,9 @@
 import webpack from "webpack";
 import { buildWebpack } from "./config/build/buildWebpack";
-import { BuildMode, BuildPaths } from "./config/types/types";
-import path from "path";
-
-import { WebpackConfiguration } from "webpack-dev-server";
 import { plugin } from "typescript-eslint";
 import { current } from "@reduxjs/toolkit";
-import { buildDevServer } from "./config/build/buildDevServer";
-import { buildLoaders } from "./config/build/buildLoaders";
-import { buildPlugins } from "./config/build/buildPlugins";
-import { buildResolvers } from "./config/build/buildResolvers";
-import { BuildOptions } from "./config/types/types";
+import { BuildMode, BuildPaths } from "./config/types/types";
+import path from "path";
 
 interface EnvVariables {
   mode: BuildMode;
