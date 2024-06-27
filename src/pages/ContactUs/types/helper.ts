@@ -1,4 +1,4 @@
-import { ContactUsType } from "@/pages/ContactUs/types/types";
+import { ContactUsType } from "./types";
 import * as yup from "yup";
 
 export const initialValue: ContactUsType = {
@@ -19,9 +19,8 @@ export const formData = (): ContactUsType => {
     ).value,
     email: (document.querySelector('input[name="email"]') as HTMLInputElement)
       .value,
-    subject: (
-      document.querySelector('input[name="subject"]') as HTMLInputElement
-    ).value,
+    subject: (document.querySelector('div[name="subject"]') as HTMLInputElement)
+      .value,
     message: (document.querySelector("textarea") as HTMLTextAreaElement).value,
   };
 };
