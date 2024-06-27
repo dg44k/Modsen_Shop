@@ -2,7 +2,7 @@ import DescriptionProduct from "@/components/DescriptionProduct";
 import GalleryProduct from "@/components/GalleryProducts";
 import InfoDetailProduct from "@/components/InfoDetailProduct";
 import ListSimilarCard from "@/components/ListSimilarCard";
-import React, { FC } from "react";
+import { FC } from "react";
 import { useParams } from "react-router-dom";
 import { WrapperDetailCard, WrapperInfoBlockCard } from "./styled";
 import { useGetProductQuery } from "@/store/slices/apiSlice";
@@ -21,7 +21,7 @@ const DetailCard: FC = () => {
     <WrapperDetailCard>
       <WrapperInfoBlockCard>
         <GalleryProduct
-          listImages={[data.image, data.image, data.image]}
+          listImages={[data.image, data.image, data.image]} //Только для примера продублировал картинки, в апи 1 картинка
           id={data.id}
           title={data.title}
         />

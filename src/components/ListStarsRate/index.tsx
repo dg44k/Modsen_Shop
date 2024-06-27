@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import IconSVGStar from "@/assets/icon-star.svg";
 import { WrapperListStarsRate } from "./styled";
 import { ListStarsRateProps } from "./types";

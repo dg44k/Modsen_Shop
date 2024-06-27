@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { StyledSliderDot, StyledSliderDots } from "./styled";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/store";

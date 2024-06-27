@@ -1,6 +1,6 @@
 import AsideShop from "@/components/AsideShop";
 import ListCards from "@/components/ListCards";
-import React, { FC } from "react";
+import { FC } from "react";
 import {
   HeadingShopStyled,
   WrapperContainerShop,

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { ListSimilarProductsProps } from "./types";
 import Card from "../Card";
 import { SimpleWrapper, StyledHeading, WrapperSimilarProducts } from "./styled";

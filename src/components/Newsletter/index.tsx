@@ -1,4 +1,4 @@
-import React, { FC, FormEvent, FormEventHandler, useRef } from "react";
+import { FC, FormEvent, FormEventHandler, useRef, useState } from "react";
 import {
   StyledButtonNewsletter,
   StyledFormNewsletter,
@@ -9,19 +9,29 @@ import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
 import { NewsletterType, initialValues, validationSchema } from "./helper";
 import emailjs from "@emailjs/browser";
 import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from "@/constants/constants";
+import InfoModal from "../InfoModal";
 
 const Newsletter: FC = () => {
+  const [modalVisible, setModalVisible] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
+
+  const handleCloseModal = () => {
+    setModalVisible(false);
+  };
+
   const sendEmail = (email: string) => {
     const templateParams = {
       to_email: email,
     };
 
     emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY).then(
-      response => {
-        console.log("Email sent!", response.status, response.text);
+      () => {
+        setModalMessage("Your request has been successfully processed!");
+        setModalVisible(true);
       },
-      error => {
-        console.error("Email sending failed:", error);
+      () => {
+        setModalMessage("An error occurred, please try again!");
+        setModalVisible(true);
       },
     );
   };
@@ -58,6 +68,9 @@ const Newsletter: FC = () => {
           <StyledButtonNewsletter type="submit" value="&#8594;" />
         </Form>
       </Formik>
+      <InfoModal show={modalVisible} onClose={handleCloseModal}>
+        {modalMessage}
+      </InfoModal>
     </StyledFormNewsletter>
   );
 };

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { StyledIcons } from "./styled";
 import IconSVGLinkedIn from "@/assets/icon-linkedin.svg";
 import IconSVGInstagram from "@/assets/icon-instagram.svg";

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { CardProps } from "./types";
 import IconEye from "@/assets/icon-eye.svg";
 import IconCart from "@/assets/icon-cart.svg";

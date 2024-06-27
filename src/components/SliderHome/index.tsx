@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react";
+import { FC, useEffect } from "react";
 import SliderList from "./components/SliderList";
 import { StyledSliderWrapper } from "./styled";
 import SliderDots from "./components/SliderDots";

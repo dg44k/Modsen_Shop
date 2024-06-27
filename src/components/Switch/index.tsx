@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { SwitchContainer, SwitchInput, SwitchSlider } from "./styled";
 import { setIsChecked } from "@/store/slices/switchSlice";
 import { useDispatch, useSelector } from "react-redux";

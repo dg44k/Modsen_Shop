@@ -1,5 +1,5 @@
 import SliderHome from "@/components/SliderHome";
-import React, { FC } from "react";
+import { FC } from "react";
 import {
   GlobalStylesForHome,
   StyledHeaderMain,

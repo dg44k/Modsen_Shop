@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { InfoDetailProductProps } from "./types";
 import IconSVGMail from "@/assets/icon-mail.svg";
 import IconSVGInstagram from "@/assets/icon-instagram.svg";

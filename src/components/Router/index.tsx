@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import HomePage from "@/pages/Home/index";

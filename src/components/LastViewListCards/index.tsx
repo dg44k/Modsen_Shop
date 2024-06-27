@@ -1,5 +1,5 @@
 import { useGetProductsQuery } from "@/store/slices/apiSlice";
-import React, { FC } from "react";
+import { FC } from "react";
 import Card from "../Card";
 import { WrapperViewLastListCards } from "./styled";
 

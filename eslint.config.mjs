@@ -48,7 +48,8 @@ export default [
     rules: {
       ...prettierConfig.rules,
       "prettier/prettier": "error",
-      "@typescript-eslint/no-unused-vars": "off"
+      "@typescript-eslint/no-unused-vars": "off",
+      "react/react-in-jsx-scope": "off" 
     },
   },
 ];

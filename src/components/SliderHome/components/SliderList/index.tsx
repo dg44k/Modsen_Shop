@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import SliderListItem from "../SliderListItem/index";
 import { StyledSliderList } from "./styled";
 import { setActiveIndex } from "@/store/slices/sliderSlice";
