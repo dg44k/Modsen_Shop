@@ -8,6 +8,7 @@ import {
 import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
 import { NewsletterType, initialValues, validationSchema } from "./helper";
 import emailjs from "@emailjs/browser";
+import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from "@/constants/constants";
 
 const Newsletter: FC = () => {
   const sendEmail = (email: string) => {
@@ -15,21 +16,14 @@ const Newsletter: FC = () => {
       to_email: email,
     };
 
-    emailjs
-      .send(
-        "service_9fo7658",
-        "template_4pesupm",
-        templateParams,
-        "b6nkFTP3yW606TrTP",
-      )
-      .then(
-        response => {
-          console.log("Email sent!", response.status, response.text);
-        },
-        error => {
-          console.error("Email sending failed:", error);
-        },
-      );
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY).then(
+      response => {
+        console.log("Email sent!", response.status, response.text);
+      },
+      error => {
+        console.error("Email sending failed:", error);
+      },
+    );
   };
 
   const handleSubmit = (
