@@ -5,6 +5,7 @@ import {
   StyledHeaderMain,
   StyledLinkViewAll,
 } from "./styled";
+import LastViewListCards from "@/components/LastViewListCards";
 
 const HomePage: FC = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage: FC = () => {
         <h1>Shop The Latest</h1>
         <StyledLinkViewAll to="/shop">View All</StyledLinkViewAll>
       </StyledHeaderMain>
+      <LastViewListCards />
     </div>
   );
 };

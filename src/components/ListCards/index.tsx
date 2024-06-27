@@ -7,10 +7,10 @@ import { useGetProductsQuery } from "@/store/slices/apiSlice";
 const ListCards: FC<ListCardsProps> = () => {
   const { data, isLoading, isError } = useGetProductsQuery(undefined);
   if (isLoading) {
-    return <StyledLoading>Loading...</StyledLoading>;
+    return <div className="loading-api">Loading...</div>;
   }
   if (isError) {
-    return <StyledError>Error...</StyledError>;
+    return <div className="error-api">Error...</div>;
   }
   return (
     <ListCardsStyled>
