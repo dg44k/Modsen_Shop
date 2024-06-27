@@ -24,8 +24,8 @@ const ContactUs: FC = () => {
         <Input type="email" placeholder="Email" />
         <Input type="text" placeholder="Subject" />
         <TextArea placeholder="Message"></TextArea>
-        <Button type="submit">SEND</Button>
       </StyledGridBlockInput>
+      <Button type="submit">SEND</Button>
     </StyledContactUs>
   );
 };

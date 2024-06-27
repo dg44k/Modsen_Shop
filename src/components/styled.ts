@@ -8,11 +8,11 @@ export const GlobalStyles = createGlobalStyle`
 	}
 
 	html. body, .container {
-		height: 100%;
+		height: 100%
 	}
 
 	body, #root {
-    width: 100vw;
+		width: 100%;
     display: flex;
     justify-content: center;
   }

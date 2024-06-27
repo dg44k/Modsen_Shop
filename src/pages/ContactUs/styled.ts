@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
 export const StyledContactUs = styled.form`
-  height: 100%;
-  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 90px 0;
 `;
 
 export const StyledContactUsHeadingOne = styled.h1`
@@ -47,9 +50,7 @@ export const TextArea = styled.textarea`
 
 export const Button = styled.button`
   max-width: 500px;
-  justify-self: center;
-  font-size: 16px;
-  grid-column: span 2;
+  width: 100%;
   padding: 10px;
   color: #fff;
   background-color: #000;
