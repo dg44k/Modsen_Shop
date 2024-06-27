@@ -26,6 +26,7 @@ const SliderList: FC<SliderProps> = ({ slides }) => {
 
   useEffect(() => {
     if (sliderRef.current) {
+      sliderRef.current.style.transition = "transform 0.3s ease-out";
       sliderRef.current.style.transform = `translateX(-${activeIndex * 100}%)`;
     }
   }, [activeIndex]);
@@ -37,7 +38,9 @@ const SliderList: FC<SliderProps> = ({ slides }) => {
 
   const handleTouchMove = (e: React.TouchEvent) => {
     if (!isDragging) return;
+
     const diff = startX - e.touches[0].clientX;
+
     if (diff > 50) {
       dispatch(setActiveIndex((activeIndex + 1) % slides.length));
       setIsDragging(false);

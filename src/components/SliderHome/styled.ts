@@ -4,4 +4,5 @@ export const StyledSliderWrapper = styled.div`
   position: relative;
   display: flex;
   width: 100%;
+  overflow: hidden;
 `;
