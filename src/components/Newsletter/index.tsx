@@ -8,7 +8,11 @@ import {
 import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
 import { NewsletterType, initialValues, validationSchema } from "./helper";
 import emailjs from "@emailjs/browser";
-import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from "@/constants/constants";
+import {
+  PUBLIC_KEY,
+  SERVICE_ID_NEWSLETTER,
+  TEMPLATE_ID_NEWSLETTER,
+} from "@/constants/constants";
 import InfoModal from "../InfoModal";
 
 const Newsletter: FC = () => {
@@ -24,16 +28,23 @@ const Newsletter: FC = () => {
       to_email: email,
     };
 
-    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY).then(
-      () => {
-        setModalMessage("Your request has been successfully processed!");
-        setModalVisible(true);
-      },
-      () => {
-        setModalMessage("An error occurred, please try again!");
-        setModalVisible(true);
-      },
-    );
+    emailjs
+      .send(
+        SERVICE_ID_NEWSLETTER,
+        TEMPLATE_ID_NEWSLETTER,
+        templateParams,
+        PUBLIC_KEY,
+      )
+      .then(
+        () => {
+          setModalMessage("Your request has been successfully processed!");
+          setModalVisible(true);
+        },
+        () => {
+          setModalMessage("An error occurred, please try again!");
+          setModalVisible(true);
+        },
+      );
   };
 
   const handleSubmit = (
