@@ -37,6 +37,12 @@ export const GlobalStyles = createGlobalStyle`
 		font-size: 33px;
 		font-weight: 500;
 	}
+	
+	.loading-api, .error-api {
+		display: flex;
+  	justify-content: center;
+  	align-items: center;
+	}
 `;
 
 export const Container = styled.div`

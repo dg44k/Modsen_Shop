@@ -4,13 +4,20 @@ import { useSelector } from "react-redux";
 import { ListSimilarProductsProps } from "./types";
 import Card from "../Card";
 import { SimpleWrapper, StyledHeading, WrapperSimilarProducts } from "./styled";
+import { useGetProductsQuery } from "@/store/slices/apiSlice";
 
 const ListSimilarCard: FC<ListSimilarProductsProps> = ({
   currentCategory,
   currentElementId,
 }) => {
-  const products = useSelector((state: RootState) => state.products.products);
-  const similarProducts = products.filter(
+  const { data, isLoading, isError } = useGetProductsQuery();
+  if (isLoading) {
+    return <div className="loading-api">Loading...</div>;
+  }
+  if (isError) {
+    return <div className="error-api">Error...</div>;
+  }
+  const similarProducts = data.filter(
     product =>
       product.category === currentCategory && product.id !== currentElementId,
   );
