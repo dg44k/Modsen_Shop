@@ -36,7 +36,7 @@ export const StyledLink = styled(Link)`
 
 export const StyledIconCart = styled(Link)`
   color: #000;
-  
+
   & > svg {
     display: block;
     margin-left: -20px;

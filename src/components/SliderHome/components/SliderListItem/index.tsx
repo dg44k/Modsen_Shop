@@ -1,7 +1,8 @@
 import { FC } from "react";
-import { StyledSlideImage } from "./styled";
-import { SliderListItemProps } from "../../types";
 import { Link } from "react-router-dom";
+
+import { SliderListItemProps } from "../../types";
+import { StyledSlideImage } from "./styled";
 
 const SliderListItem: FC<SliderListItemProps> = ({ image, alt, id }) => {
   return (

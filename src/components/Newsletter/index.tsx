@@ -1,19 +1,21 @@
+import emailjs from "@emailjs/browser";
+import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
 import { FC, FormEvent, FormEventHandler, useRef, useState } from "react";
+
+import {
+  PUBLIC_KEY,
+  SERVICE_ID_NEWSLETTER,
+  TEMPLATE_ID_NEWSLETTER,
+} from "@/constants/constants";
+
+import InfoModal from "../InfoModal";
+import { initialValues, NewsletterType, validationSchema } from "./helper";
 import {
   StyledButtonNewsletter,
   StyledFormNewsletter,
   StyledInputNewsletter,
   WrapperInput,
 } from "./styled";
-import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
-import { NewsletterType, initialValues, validationSchema } from "./helper";
-import emailjs from "@emailjs/browser";
-import {
-  PUBLIC_KEY,
-  SERVICE_ID_NEWSLETTER,
-  TEMPLATE_ID_NEWSLETTER,
-} from "@/constants/constants";
-import InfoModal from "../InfoModal";
 
 const Newsletter: FC = () => {
   const [modalVisible, setModalVisible] = useState(false);

@@ -1,8 +1,10 @@
 import { FC } from "react";
-import { ListSimilarProductsProps } from "./types";
+
+import { useGetProductsQuery } from "@/store/slices/apiSlice";
+
 import Card from "../Card";
 import { SimpleWrapper, StyledHeading, WrapperSimilarProducts } from "./styled";
-import { useGetProductsQuery } from "@/store/slices/apiSlice";
+import { ListSimilarProductsProps } from "./types";
 
 const ListSimilarCard: FC<ListSimilarProductsProps> = ({
   currentCategory,

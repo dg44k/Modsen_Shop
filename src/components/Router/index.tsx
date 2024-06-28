@@ -1,12 +1,14 @@
 import { FC } from "react";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import App from "../App";
-import HomePage from "@/pages/Home/index";
-import ErrorNotFound from "@/pages/ErrorNotFound/index";
-import ContactUs from "@/pages/ContactUs/index";
-import Shop from "@/pages/Shop";
-import DetailCard from "../../pages/DetailCard";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import Cart from "@/pages/Cart";
+import ContactUs from "@/pages/ContactUs/index";
+import ErrorNotFound from "@/pages/ErrorNotFound/index";
+import HomePage from "@/pages/Home/index";
+import Shop from "@/pages/Shop";
+
+import DetailCard from "../../pages/DetailCard";
+import App from "../App";
 
 const Router: FC = () => {
   const router = createBrowserRouter([

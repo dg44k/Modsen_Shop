@@ -1,11 +1,12 @@
 import { FC } from "react";
-import { DescriptionProductProps } from "./types";
+
 import {
   DescriptionProductHeading,
   StyledDescriptionLine,
   StyledDescriptionProduct,
   WrapperDescriptionProduct,
 } from "./styled";
+import { DescriptionProductProps } from "./types";
 
 const DescriptionProduct: FC<DescriptionProductProps> = ({ description }) => {
   return (

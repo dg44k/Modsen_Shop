@@ -1,6 +1,7 @@
 import { FC } from "react";
-import { ButtonProps } from "./types";
+
 import { StyledButton } from "./styled";
+import { ButtonProps } from "./types";
 
 const Button: FC<ButtonProps> = ({ children }) => {
   return <StyledButton>{children}</StyledButton>;

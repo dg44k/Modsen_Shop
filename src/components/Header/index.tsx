@@ -1,5 +1,8 @@
 import { FC } from "react";
+
 import IconSvgCart from "@/assets/icon-cart.svg";
+
+import Switch from "../Switch";
 import {
   Logo,
   Span,
@@ -8,7 +11,6 @@ import {
   StyledLink,
   StyledNav,
 } from "./styled";
-import Switch from "../Switch";
 
 const Header: FC = () => {
   return (

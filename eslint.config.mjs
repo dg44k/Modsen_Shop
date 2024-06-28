@@ -1,10 +1,11 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import tseslint from "typescript-eslint";
-import pluginReactConfig from "eslint-plugin-react/configs/recommended.js";
 import { fixupConfigRules } from "@eslint/compat";
+import pluginJs from "@eslint/js";
 import prettierConfig from "eslint-config-prettier";
 import pluginPrettier from "eslint-plugin-prettier";
+import pluginReactConfig from "eslint-plugin-react/configs/recommended.js";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
+import globals from "globals";
+import tseslint from "typescript-eslint";
 
 export default [
   {
@@ -49,7 +50,16 @@ export default [
       ...prettierConfig.rules,
       "prettier/prettier": "error",
       "@typescript-eslint/no-unused-vars": "off",
-      "react/react-in-jsx-scope": "off" 
+      "react/react-in-jsx-scope": "off",
+    },
+  },
+  {
+    plugins: {
+      "simple-import-sort": simpleImportSort,
+    },
+    rules: {
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error",
     },
   },
 ];

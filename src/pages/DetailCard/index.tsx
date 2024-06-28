@@ -1,11 +1,13 @@
+import { FC } from "react";
+import { useParams } from "react-router-dom";
+
 import DescriptionProduct from "@/components/DescriptionProduct";
 import GalleryProduct from "@/components/GalleryProducts";
 import InfoDetailProduct from "@/components/InfoDetailProduct";
 import ListSimilarCard from "@/components/ListSimilarCard";
-import { FC } from "react";
-import { useParams } from "react-router-dom";
-import { WrapperDetailCard, WrapperInfoBlockCard } from "./styled";
 import { useGetProductQuery } from "@/store/slices/apiSlice";
+
+import { WrapperDetailCard, WrapperInfoBlockCard } from "./styled";
 
 const DetailCard: FC = () => {
   const { id } = useParams<{ id: string }>();

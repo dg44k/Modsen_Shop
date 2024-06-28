@@ -1,9 +1,14 @@
 import { FC } from "react";
-import { InfoDetailProductProps } from "./types";
-import IconSVGMail from "@/assets/icon-mail.svg";
-import IconSVGInstagram from "@/assets/icon-instagram.svg";
+import { Link } from "react-router-dom";
+
 import IconSVGFacebook from "@/assets/icon-facebook.svg";
+import IconSVGInstagram from "@/assets/icon-instagram.svg";
+import IconSVGMail from "@/assets/icon-mail.svg";
 import IconSVGTwitter from "@/assets/icon-twitter.svg";
+
+import Button from "../Button";
+import CounterProductCart from "../CounterProductCart";
+import ListStarsRate from "../ListStarsRate";
 import {
   BoldCategories,
   InfoCategories,
@@ -19,10 +24,7 @@ import {
   WrapperLinks,
   WrapperRatingProduct,
 } from "./styled";
-import ListStarsRate from "../ListStarsRate";
-import CounterProductCart from "../CounterProductCart";
-import Button from "../Button";
-import { Link } from "react-router-dom";
+import { InfoDetailProductProps } from "./types";
 
 const InfoDetailProduct: FC<InfoDetailProductProps> = ({ product }) => {
   return (

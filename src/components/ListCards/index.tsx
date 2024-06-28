@@ -1,8 +1,10 @@
 import { FC } from "react";
-import { ListCardsProps } from "./types";
+
+import { useGetProductsQuery } from "@/store/slices/apiSlice";
+
 import Card from "../Card";
 import { ListCardsStyled, StyledError, StyledLoading } from "./styled";
-import { useGetProductsQuery } from "@/store/slices/apiSlice";
+import { ListCardsProps } from "./types";
 
 const ListCards: FC<ListCardsProps> = () => {
   const { data, isLoading, isError } = useGetProductsQuery(undefined);

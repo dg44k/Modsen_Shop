@@ -1,8 +1,10 @@
 import { FC } from "react";
+
 import IconSVGStar from "@/assets/icon-star.svg";
+import { COUNT_RATE } from "@/constants/constants";
+
 import { WrapperListStarsRate } from "./styled";
 import { ListStarsRateProps } from "./types";
-import { COUNT_RATE } from "@/constants/constants";
 
 const ListStarsRate: FC<ListStarsRateProps> = ({ rate }) => {
   const rateRound = Math.round(rate);

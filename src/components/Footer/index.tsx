@@ -1,4 +1,8 @@
 import { FC } from "react";
+import { Link } from "react-router-dom";
+
+import ListIcons from "../ListIcons";
+import Newsletter from "../Newsletter";
 import {
   StyledAbout,
   StyledAdditionalLink,
@@ -7,9 +11,6 @@ import {
   StyledLinks,
   StyledPrivacy,
 } from "./styled";
-import ListIcons from "../ListIcons";
-import { Link } from "react-router-dom";
-import Newsletter from "../Newsletter";
 
 const Footer: FC = () => {
   return (

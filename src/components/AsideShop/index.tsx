@@ -1,11 +1,13 @@
 import { FC } from "react";
+
+import IconSearch from "@/assets/icon-search.svg";
+
 import {
   InputSearchStyled,
   WrapperAsideStyled,
   WrapperIconSearchStyled,
   WrapperSearchStyled,
 } from "./styled";
-import IconSearch from "@/assets/icon-search.svg";
 
 const AsideShop: FC = () => {
   return (

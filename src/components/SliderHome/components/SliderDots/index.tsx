@@ -1,9 +1,11 @@
 import { FC } from "react";
-import { StyledSliderDot, StyledSliderDots } from "./styled";
 import { useDispatch, useSelector } from "react-redux";
+
 import { AppDispatch, RootState } from "@/store";
 import { setActiveIndex } from "@/store/slices/sliderSlice";
+
 import { SliderDotsProps } from "../../types";
+import { StyledSliderDot, StyledSliderDots } from "./styled";
 
 const SliderDots: FC<SliderDotsProps> = ({ slides }) => {
   const dispatch = useDispatch<AppDispatch>();

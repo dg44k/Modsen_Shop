@@ -1,12 +1,14 @@
+import { FC } from "react";
+
 import AsideShop from "@/components/AsideShop";
 import ListCards from "@/components/ListCards";
-import { FC } from "react";
+import { useGetProductsQuery } from "@/store/slices/apiSlice";
+
 import {
   HeadingShopStyled,
   WrapperContainerShop,
   WrapperShopStyled,
 } from "./styled";
-import { useGetProductsQuery } from "@/store/slices/apiSlice";
 
 const Shop: FC = () => {
   const { data, isLoading, isError } = useGetProductsQuery();

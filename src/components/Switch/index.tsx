@@ -1,8 +1,10 @@
 import { FC } from "react";
-import { SwitchContainer, SwitchInput, SwitchSlider } from "./styled";
-import { setIsChecked } from "@/store/slices/switchSlice";
 import { useDispatch, useSelector } from "react-redux";
+
 import { AppDispatch, RootState } from "@/store/index";
+import { setIsChecked } from "@/store/slices/switchSlice";
+
+import { SwitchContainer, SwitchInput, SwitchSlider } from "./styled";
 
 const Switch: FC = () => {
   const isChecked = useSelector((state: RootState) => state.switch.checked);

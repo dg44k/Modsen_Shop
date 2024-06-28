@@ -1,11 +1,13 @@
-import SliderHome from "@/components/SliderHome";
 import { FC } from "react";
+
+import LastViewListCards from "@/components/LastViewListCards";
+import SliderHome from "@/components/SliderHome";
+
 import {
   GlobalStylesForHome,
   StyledHeaderMain,
   StyledLinkViewAll,
 } from "./styled";
-import LastViewListCards from "@/components/LastViewListCards";
 
 const HomePage: FC = () => {
   return (

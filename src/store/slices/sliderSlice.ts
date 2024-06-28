@@ -1,5 +1,6 @@
-import { ProductType } from "@/types/types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+
+import { ProductType } from "@/types/types";
 
 interface SliderState {
   activeIndex: number;

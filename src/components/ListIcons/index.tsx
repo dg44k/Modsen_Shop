@@ -1,10 +1,12 @@
 import { FC } from "react";
-import { StyledIcons } from "./styled";
-import IconSVGLinkedIn from "@/assets/icon-linkedin.svg";
-import IconSVGInstagram from "@/assets/icon-instagram.svg";
-import IconSVGFacebook from "@/assets/icon-facebook.svg";
-import IconSVGTwitter from "@/assets/icon-twitter.svg";
 import { Link } from "react-router-dom";
+
+import IconSVGFacebook from "@/assets/icon-facebook.svg";
+import IconSVGInstagram from "@/assets/icon-instagram.svg";
+import IconSVGLinkedIn from "@/assets/icon-linkedin.svg";
+import IconSVGTwitter from "@/assets/icon-twitter.svg";
+
+import { StyledIcons } from "./styled";
 
 const ListIcons: FC = () => {
   return (

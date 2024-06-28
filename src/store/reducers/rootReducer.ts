@@ -1,4 +1,5 @@
 import { combineReducers } from "redux";
+
 import { api } from "../slices/apiSlice";
 import { sliderReducer } from "../slices/sliderSlice";
 import { switchReducer } from "../slices/switchSlice";

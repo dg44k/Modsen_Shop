@@ -1,4 +1,5 @@
 import { FC, useState } from "react";
+
 import { ButtonCounter, SliceCounterValue, WrapperCounter } from "./styled";
 
 const CounterProductCart: FC = () => {

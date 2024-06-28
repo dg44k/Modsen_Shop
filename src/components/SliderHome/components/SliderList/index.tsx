@@ -1,10 +1,12 @@
 import { FC, useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import { AppDispatch, RootState } from "@/store/index";
+import { setActiveIndex } from "@/store/slices/sliderSlice";
+
+import { SliderProps } from "../../types";
 import SliderListItem from "../SliderListItem/index";
 import { StyledSliderList } from "./styled";
-import { setActiveIndex } from "@/store/slices/sliderSlice";
-import { AppDispatch, RootState } from "@/store/index";
-import { useDispatch, useSelector } from "react-redux";
-import { SliderProps } from "../../types";
 
 const SliderList: FC<SliderProps> = ({ slides }) => {
   const activeIndex = useSelector(

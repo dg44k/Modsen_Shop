@@ -1,7 +1,9 @@
 import { FC } from "react";
-import { CardProps } from "./types";
-import IconEye from "@/assets/icon-eye.svg";
+import { Link } from "react-router-dom";
+
 import IconCart from "@/assets/icon-cart.svg";
+import IconEye from "@/assets/icon-eye.svg";
+
 import {
   CardImageStyled,
   CardPriceStyled,
@@ -10,7 +12,7 @@ import {
   ProductIconsShow,
   WrapperInfoCardStyled,
 } from "./styled";
-import { Link } from "react-router-dom";
+import { CardProps } from "./types";
 
 const Card: FC<CardProps> = ({ id, image, alt, title, price }) => {
   return (

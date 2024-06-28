@@ -1,4 +1,16 @@
+import emailjs from "@emailjs/browser";
+import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
 import { FC, useState } from "react";
+
+import InfoModal from "@/components/InfoModal/index";
+import {
+  COMPANY_EMAIL,
+  PUBLIC_KEY,
+  SERVICE_ID_CONTACT_US,
+  TEMPLATE_ID_CONTACT_US,
+} from "@/constants/constants";
+import { initialValue, validationSchema } from "@/pages/ContactUs/types/helper";
+
 import {
   Button,
   Input,
@@ -9,17 +21,7 @@ import {
   TextArea,
   WrapperInput,
 } from "./styled";
-import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
-import { initialValue, validationSchema } from "@/pages/ContactUs/types/helper";
 import { ContactUsType } from "./types/types";
-import {
-  COMPANY_EMAIL,
-  PUBLIC_KEY,
-  SERVICE_ID_CONTACT_US,
-  TEMPLATE_ID_CONTACT_US,
-} from "@/constants/constants";
-import emailjs from "@emailjs/browser";
-import InfoModal from "@/components/InfoModal/index";
 
 const ContactUs: FC = () => {
   const [modalVisible, setModalVisible] = useState(false);
