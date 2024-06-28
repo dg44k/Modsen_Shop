@@ -5,42 +5,35 @@ import { ROUTES } from "@/constants/routes";
 
 import ListIcons from "../ListIcons";
 import Newsletter from "../Newsletter";
-import {
-  StyledAbout,
-  StyledAdditionalLink,
-  StyledFlexLinks,
-  StyledFooter,
-  StyledLinks,
-  StyledPrivacy,
-} from "./styled";
+import * as StyledComponents from "./styled";
 
 const Footer: FC = () => {
   return (
-    <StyledFooter>
+    <StyledComponents.StyledFooter>
       <>
-        <StyledAbout>
-          <StyledFlexLinks>
-            <StyledAdditionalLink to={ROUTES.contactUS}>
+        <StyledComponents.StyledAbout>
+          <StyledComponents.StyledFlexLinks>
+            <StyledComponents.StyledAdditionalLink to={ROUTES.contactUS}>
               CONTACT US
-            </StyledAdditionalLink>
-            <StyledAdditionalLink to={ROUTES.home}>
+            </StyledComponents.StyledAdditionalLink>
+            <StyledComponents.StyledAdditionalLink to={ROUTES.home}>
               TERMS OF SERVICES
-            </StyledAdditionalLink>
-            <StyledAdditionalLink to={ROUTES.home}>
+            </StyledComponents.StyledAdditionalLink>
+            <StyledComponents.StyledAdditionalLink to={ROUTES.home}>
               SHIPPING AND RETURNS
-            </StyledAdditionalLink>
-          </StyledFlexLinks>
+            </StyledComponents.StyledAdditionalLink>
+          </StyledComponents.StyledFlexLinks>
           <Newsletter />
-        </StyledAbout>
-        <StyledLinks>
-          <StyledPrivacy>
+        </StyledComponents.StyledAbout>
+        <StyledComponents.StyledLinks>
+          <StyledComponents.StyledPrivacy>
             &#169; 2023 Shelly. <Link to={ROUTES.home}>Terms of use</Link> and{" "}
             <Link to={ROUTES.home}>privacy policy</Link>.
-          </StyledPrivacy>
+          </StyledComponents.StyledPrivacy>
           <ListIcons />
-        </StyledLinks>
+        </StyledComponents.StyledLinks>
       </>
-    </StyledFooter>
+    </StyledComponents.StyledFooter>
   );
 };
 

@@ -3,7 +3,7 @@ import { FC } from "react";
 import { useGetProductsQuery } from "@/store/slices/apiSlice";
 
 import Card from "../Card";
-import { ListCardsStyled, StyledError, StyledLoading } from "./styled";
+import { ListCardsStyled } from "./styled";
 import { ListCardsProps } from "./types";
 
 const ListCards: FC<ListCardsProps> = () => {

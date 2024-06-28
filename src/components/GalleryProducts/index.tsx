@@ -1,12 +1,6 @@
 import { FC, useEffect, useState } from "react";
 
-import {
-  BigImageProduct,
-  ListMiniImageProducts,
-  MiniImageProduct,
-  Modal,
-  WrapperGalleryProducts,
-} from "./styled";
+import * as StyledComponents from "./styled";
 import { GalleryProductsProps } from "./types";
 
 const GalleryProducts: FC<GalleryProductsProps> = ({
@@ -39,29 +33,31 @@ const GalleryProducts: FC<GalleryProductsProps> = ({
     setIsModalOpen(false);
   };
 
+  const sliceMiniImages = images.slice(0, listImages.length - 1);
+
   return (
-    <WrapperGalleryProducts>
-      <ListMiniImageProducts>
-        {images.slice(0, listImages.length - 1).map((image: string, index) => (
-          <MiniImageProduct
+    <StyledComponents.WrapperGalleryProducts>
+      <StyledComponents.ListMiniImageProducts>
+        {sliceMiniImages.map((image: string, index) => (
+          <StyledComponents.MiniImageProduct
             key={id - index}
             src={image}
             alt={title}
             onClick={() => handleMiniImageClick(image, index)}
           />
         ))}
-      </ListMiniImageProducts>
-      <BigImageProduct
+      </StyledComponents.ListMiniImageProducts>
+      <StyledComponents.BigImageProduct
         src={bigImage}
         alt={title}
         onClick={handleBigImageClick}
       />
       {isModalOpen && (
-        <Modal onClick={closeModal}>
+        <StyledComponents.Modal onClick={closeModal}>
           <img src={bigImage} alt={title} />
-        </Modal>
+        </StyledComponents.Modal>
       )}
-    </WrapperGalleryProducts>
+    </StyledComponents.WrapperGalleryProducts>
   );
 };
 

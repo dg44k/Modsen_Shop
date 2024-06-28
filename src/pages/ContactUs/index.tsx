@@ -11,16 +11,7 @@ import {
 } from "@/constants/emailJS";
 import { initialValue, validationSchema } from "@/pages/ContactUs/validation";
 
-import {
-  Button,
-  Input,
-  StyledContactUs,
-  StyledContactUsHeadingOne,
-  StyledContactUsHeadingThree,
-  StyledGridBlockInput,
-  TextArea,
-  WrapperInput,
-} from "./styled";
+import * as StyledComponents from "./styled";
 import { ContactUsType } from "./types";
 
 const ContactUs: FC = () => {
@@ -69,12 +60,14 @@ const ContactUs: FC = () => {
 
   return (
     <>
-      <StyledContactUs>
-        <StyledContactUsHeadingOne>Contact Us</StyledContactUsHeadingOne>
-        <StyledContactUsHeadingThree>
+      <StyledComponents.StyledContactUs>
+        <StyledComponents.StyledContactUsHeadingOne>
+          Contact Us
+        </StyledComponents.StyledContactUsHeadingOne>
+        <StyledComponents.StyledContactUsHeadingThree>
           Say Hello, send us your thoughts about our products, or share
           <br /> your ideas with our Team!
-        </StyledContactUsHeadingThree>
+        </StyledComponents.StyledContactUsHeadingThree>
 
         <Formik
           initialValues={initialValue}
@@ -82,72 +75,82 @@ const ContactUs: FC = () => {
           onSubmit={handleSubmit}
         >
           <Form>
-            <StyledGridBlockInput>
-              <WrapperInput>
+            <StyledComponents.StyledGridBlockInput>
+              <StyledComponents.WrapperInput>
                 <Field
                   type="text"
                   name="firstName"
                   placeholder="First Name"
-                  as={Input}
+                  as={StyledComponents.Input}
                 />
                 <ErrorMessage
                   name="firstName"
                   component="div"
                   className="error-message"
                 />
-              </WrapperInput>
+              </StyledComponents.WrapperInput>
 
-              <WrapperInput>
+              <StyledComponents.WrapperInput>
                 <Field
                   type="text"
                   name="lastName"
                   placeholder="Last Name"
-                  as={Input}
+                  as={StyledComponents.Input}
                 />
                 <ErrorMessage
                   name="lastName"
                   component="div"
                   className="error-message"
                 />
-              </WrapperInput>
+              </StyledComponents.WrapperInput>
 
-              <WrapperInput>
+              <StyledComponents.WrapperInput>
                 <Field
                   type="email"
                   name="email"
                   placeholder="Email"
-                  as={Input}
+                  as={StyledComponents.Input}
                 />
                 <ErrorMessage
                   name="email"
                   component="div"
                   className="error-message"
                 />
-              </WrapperInput>
+              </StyledComponents.WrapperInput>
 
-              <WrapperInput>
-                <Field name="subject" placeholder="Subject" as={Input} />
+              <StyledComponents.WrapperInput>
+                <Field
+                  name="subject"
+                  placeholder="Subject"
+                  as={StyledComponents.Input}
+                />
                 <ErrorMessage
                   name="subject"
                   component="div"
                   className="error-message"
                 />
-              </WrapperInput>
+              </StyledComponents.WrapperInput>
 
-              <WrapperInput>
-                <Field name="message" placeholder="Message" as={TextArea} />
+              <StyledComponents.WrapperInput>
+                <Field
+                  name="message"
+                  placeholder="Message"
+                  as={StyledComponents.TextArea}
+                />
                 <ErrorMessage
                   name="message"
                   component="div"
                   className="error-message"
                 />
-              </WrapperInput>
-            </StyledGridBlockInput>
+              </StyledComponents.WrapperInput>
+            </StyledComponents.StyledGridBlockInput>
 
-            <Button type="submit">SEND</Button>
+            <StyledComponents.Button type="submit">
+              SEND
+            </StyledComponents.Button>
           </Form>
         </Formik>
-      </StyledContactUs>
+      </StyledComponents.StyledContactUs>
       <InfoModal show={modalVisible} onClose={handleCloseModal}>
         {modalMessage}
       </InfoModal>

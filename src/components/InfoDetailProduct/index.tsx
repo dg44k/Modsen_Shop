@@ -11,41 +11,33 @@ import { ROUTES } from "@/constants/routes";
 import Button from "../Button";
 import CounterProductCart from "../CounterProductCart";
 import ListStarsRate from "../ListStarsRate";
-import {
-  BoldCategories,
-  InfoCategories,
-  MiniDescriptionProduct,
-  StyledHeading,
-  StyledPrice,
-  StyledRatingCount,
-  WrapperFlexRatingProduct,
-  WrapperFooterInfoCard,
-  WrapperHeaderInfoCard,
-  WrapperInfoCart,
-  WrapperInfoDetailProduct,
-  WrapperLinks,
-  WrapperRatingProduct,
-} from "./styled";
+import * as StyledComponents from "./styled";
 import { InfoDetailProductProps } from "./types";
 
 const InfoDetailProduct: FC<InfoDetailProductProps> = ({ product }) => {
   return (
-    <WrapperInfoDetailProduct>
-      <WrapperHeaderInfoCard>
-        <StyledHeading>{product.title}</StyledHeading>
-        <StyledPrice>$ {product.price}</StyledPrice>
-      </WrapperHeaderInfoCard>
-      <WrapperRatingProduct>
-        <WrapperFlexRatingProduct>
+    <StyledComponents.WrapperInfoDetailProduct>
+      <StyledComponents.WrapperHeaderInfoCard>
+        <StyledComponents.StyledHeading>
+          {product.title}
+        </StyledComponents.StyledHeading>
+        <StyledComponents.StyledPrice>
+          $ {product.price}
+        </StyledComponents.StyledPrice>
+      </StyledComponents.WrapperHeaderInfoCard>
+      <StyledComponents.WrapperRatingProduct>
+        <StyledComponents.WrapperFlexRatingProduct>
           <ListStarsRate rate={product.rating.rate} />
-          <StyledRatingCount>
+          <StyledComponents.StyledRatingCount>
             {product.rating.count} customer review
-          </StyledRatingCount>
-        </WrapperFlexRatingProduct>
-        <MiniDescriptionProduct>{product.description}</MiniDescriptionProduct>
-      </WrapperRatingProduct>
-      <WrapperFooterInfoCard>
-        <WrapperLinks>
+          </StyledComponents.StyledRatingCount>
+        </StyledComponents.WrapperFlexRatingProduct>
+        <StyledComponents.MiniDescriptionProduct>
+          {product.description}
+        </StyledComponents.MiniDescriptionProduct>
+      </StyledComponents.WrapperRatingProduct>
+      <StyledComponents.WrapperFooterInfoCard>
+        <StyledComponents.WrapperLinks>
           <Link to={LINK_PATHS.mail}>
             <IconSVGMail />
           </Link>
@@ -58,18 +50,21 @@ const InfoDetailProduct: FC<InfoDetailProductProps> = ({ product }) => {
           <Link to={LINK_PATHS.twitter}>
             <IconSVGTwitter />
           </Link>
-        </WrapperLinks>
-        <InfoCategories>
-          <BoldCategories>Categories:</BoldCategories> {product.category}
-        </InfoCategories>
-        <WrapperInfoCart>
+        </StyledComponents.WrapperLinks>
+        <StyledComponents.InfoCategories>
+          <StyledComponents.BoldCategories>
+            Categories:
+          </StyledComponents.BoldCategories>{" "}
+          {product.category}
+        </StyledComponents.InfoCategories>
+        <StyledComponents.WrapperInfoCart>
           <CounterProductCart />
           <Button>
             <Link to={ROUTES.cart}>ADD TO CART</Link>
           </Button>
-        </WrapperInfoCart>
-      </WrapperFooterInfoCard>
-    </WrapperInfoDetailProduct>
+        </StyledComponents.WrapperInfoCart>
+      </StyledComponents.WrapperFooterInfoCard>
+    </StyledComponents.WrapperInfoDetailProduct>
   );
 };
 

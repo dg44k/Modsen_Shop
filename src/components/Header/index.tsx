@@ -4,30 +4,25 @@ import IconSvgCart from "@/assets/icon-cart.svg";
 import { ROUTES } from "@/constants/routes";
 
 import Switch from "../Switch";
-import {
-  Logo,
-  Span,
-  StyledHeader,
-  StyledIconCart,
-  StyledLink,
-  StyledNav,
-} from "./styled";
+import * as StyledComponents from "./styled";
 
 const Header: FC = () => {
   return (
-    <StyledHeader>
-      <Logo to="/">
-        <Span>Modsen S</Span>HOPPE
-      </Logo>
+    <StyledComponents.StyledHeader>
+      <StyledComponents.Logo to="/">
+        <StyledComponents.Span>Modsen S</StyledComponents.Span>HOPPE
+      </StyledComponents.Logo>
 
-      <StyledNav>
-        <StyledLink to={ROUTES.shop}>Shop</StyledLink>
+      <StyledComponents.StyledNav>
+        <StyledComponents.StyledLink to={ROUTES.shop}>
+          Shop
+        </StyledComponents.StyledLink>
         <Switch />
-        <StyledIconCart to={ROUTES.cart}>
+        <StyledComponents.StyledIconCart to={ROUTES.cart}>
           <IconSvgCart />
-        </StyledIconCart>
-      </StyledNav>
-    </StyledHeader>
+        </StyledComponents.StyledIconCart>
+      </StyledComponents.StyledNav>
+    </StyledComponents.StyledHeader>
   );
 };
 
