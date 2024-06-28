@@ -124,12 +124,7 @@ const ContactUs: FC = () => {
               </WrapperInput>
 
               <WrapperInput>
-                <Field
-                  type="text"
-                  name="subject"
-                  placeholder="Subject"
-                  as={Input}
-                />
+                <Field name="subject" placeholder="Subject" as={Input} />
                 <ErrorMessage
                   name="subject"
                   component="div"
