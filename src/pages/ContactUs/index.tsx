@@ -8,8 +8,8 @@ import {
   PUBLIC_KEY,
   SERVICE_ID_CONTACT_US,
   TEMPLATE_ID_CONTACT_US,
-} from "@/constants/constants";
-import { initialValue, validationSchema } from "@/pages/ContactUs/types/helper";
+} from "@/constants/emailJS";
+import { initialValue, validationSchema } from "@/pages/ContactUs/validation";
 
 import {
   Button,
@@ -21,7 +21,7 @@ import {
   TextArea,
   WrapperInput,
 } from "./styled";
-import { ContactUsType } from "./types/types";
+import { ContactUsType } from "./types";
 
 const ContactUs: FC = () => {
   const [modalVisible, setModalVisible] = useState(false);

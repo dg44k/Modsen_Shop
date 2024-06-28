@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import { ROUTES } from "@/constants/routes";
 import Cart from "@/pages/Cart";
 import ContactUs from "@/pages/ContactUs/index";
 import ErrorNotFound from "@/pages/ErrorNotFound/index";
@@ -13,7 +14,7 @@ import App from "../App";
 const Router: FC = () => {
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: ROUTES.home,
       element: <App />,
       errorElement: <ErrorNotFound />,
       children: [
@@ -22,19 +23,19 @@ const Router: FC = () => {
           element: <HomePage />,
         },
         {
-          path: "/contact-us",
+          path: ROUTES.contactUS,
           element: <ContactUs />,
         },
         {
-          path: "/shop",
+          path: ROUTES.shop,
           element: <Shop />,
         },
         {
-          path: "/cart",
+          path: ROUTES.cart,
           element: <Cart />,
         },
         {
-          path: "/card/:id",
+          path: `${ROUTES.card}:id`,
           element: <DetailCard />,
         },
       ],

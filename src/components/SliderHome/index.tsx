@@ -1,7 +1,7 @@
 import { FC, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { END_SLICE_SLIDES, START_SLICE_SLIDES } from "@/constants/constants";
+import { END_SLICE_SLIDES, START_SLICE_SLIDES } from "@/constants/slider";
 import { AppDispatch, RootState } from "@/store";
 import { useGetProductsQuery } from "@/store/slices/apiSlice";
 import { setSliceSlides } from "@/store/slices/sliderSlice";

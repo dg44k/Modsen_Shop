@@ -1,4 +1,3 @@
-import { Formik } from "formik";
 import styled from "styled-components";
 
 export const StyledContactUs = styled.div`
@@ -8,6 +7,7 @@ export const StyledContactUs = styled.div`
     justify-content: center;
     align-items: center;
   }
+
   margin: 90px 0;
 `;
 
@@ -43,7 +43,6 @@ export const Input = styled.input`
 
 export const TextArea = styled.textarea`
   font-size: 16px;
-  grid-column: span 2;
   outline: none;
   border: none;
   border-bottom: 1px solid #d8d8d8;

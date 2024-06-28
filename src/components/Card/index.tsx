@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import IconCart from "@/assets/icon-cart.svg";
 import IconEye from "@/assets/icon-eye.svg";
+import { ROUTES } from "@/constants/routes";
 
 import {
   CardImageStyled,
@@ -18,10 +19,10 @@ const Card: FC<CardProps> = ({ id, image, alt, title, price }) => {
   return (
     <CardWrapperStyled>
       <ProductIconsShow className="card_product-show">
-        <Link to="/cart">
+        <Link to={ROUTES.cart}>
           <IconCart className="icon" />
         </Link>
-        <Link to={`/card/${id}`}>
+        <Link to={`${ROUTES.card}${id}`}>
           <IconEye className="icon" />
         </Link>
       </ProductIconsShow>

@@ -1,6 +1,8 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
 
+import { ROUTES } from "@/constants/routes";
+
 import ListIcons from "../ListIcons";
 import Newsletter from "../Newsletter";
 import {
@@ -15,16 +17,16 @@ import {
 const Footer: FC = () => {
   return (
     <StyledFooter>
-      <div>
+      <>
         <StyledAbout>
           <StyledFlexLinks>
-            <StyledAdditionalLink to="/contact-us">
+            <StyledAdditionalLink to={ROUTES.contactUS}>
               CONTACT US
             </StyledAdditionalLink>
-            <StyledAdditionalLink to="/">
+            <StyledAdditionalLink to={ROUTES.home}>
               TERMS OF SERVICES
             </StyledAdditionalLink>
-            <StyledAdditionalLink to="/">
+            <StyledAdditionalLink to={ROUTES.home}>
               SHIPPING AND RETURNS
             </StyledAdditionalLink>
           </StyledFlexLinks>
@@ -32,12 +34,12 @@ const Footer: FC = () => {
         </StyledAbout>
         <StyledLinks>
           <StyledPrivacy>
-            &#169; 2023 Shelly. <Link to="/">Terms of use</Link> and{" "}
-            <Link to="/">privacy policy</Link>.
+            &#169; 2023 Shelly. <Link to={ROUTES.home}>Terms of use</Link> and{" "}
+            <Link to={ROUTES.home}>privacy policy</Link>.
           </StyledPrivacy>
           <ListIcons />
         </StyledLinks>
-      </div>
+      </>
     </StyledFooter>
   );
 };

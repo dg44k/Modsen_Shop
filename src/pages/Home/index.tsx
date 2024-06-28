@@ -11,7 +11,7 @@ import {
 
 const HomePage: FC = () => {
   return (
-    <div>
+    <>
       <GlobalStylesForHome />
       <SliderHome />
       <StyledHeaderMain>
@@ -19,7 +19,7 @@ const HomePage: FC = () => {
         <StyledLinkViewAll to="/shop">View All</StyledLinkViewAll>
       </StyledHeaderMain>
       <LastViewListCards />
-    </div>
+    </>
   );
 };
 

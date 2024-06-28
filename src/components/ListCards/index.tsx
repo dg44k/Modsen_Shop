@@ -17,14 +17,7 @@ const ListCards: FC<ListCardsProps> = () => {
   return (
     <ListCardsStyled>
       {data.map(product => (
-        <Card
-          key={product.id}
-          alt={product.title}
-          id={product.id}
-          image={product.image}
-          title={product.title}
-          price={product.price}
-        />
+        <Card key={product.id} alt={product.title} {...product} />
       ))}
     </ListCardsStyled>
   );

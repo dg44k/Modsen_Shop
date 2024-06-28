@@ -19,31 +19,6 @@ const AsideShop: FC = () => {
             <IconSearch />
           </WrapperIconSearchStyled>
         </WrapperSearchStyled>
-        <div>
-          <div className="dropdown">
-            <button className="dropbtn">Sort By</button>
-            <div className="dropdown-content">
-              <input type="checkbox" name="" id="" />
-              <input type="checkbox" name="" id="" />
-              <input type="checkbox" name="" id="" />
-              <input type="checkbox" name="" id="" />
-              <input type="checkbox" name="" id="" />
-              <input type="checkbox" name="" id="" />
-              <input type="checkbox" name="" id="" />
-            </div>
-          </div>
-          <div className="dropdown">
-            <button className="dropbtn">Shop By</button>
-            <div className="dropdown-content">
-              <input type="checkbox" name="" id="" />
-              <input type="checkbox" name="" id="" />
-              <input type="checkbox" name="" id="" />
-              <input type="checkbox" name="" id="" />
-              <input type="checkbox" name="" id="" />
-              <input type="checkbox" name="" id="" />
-            </div>
-          </div>
-        </div>
       </form>
     </WrapperAsideStyled>
   );

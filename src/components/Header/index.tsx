@@ -1,6 +1,7 @@
 import { FC } from "react";
 
 import IconSvgCart from "@/assets/icon-cart.svg";
+import { ROUTES } from "@/constants/routes";
 
 import Switch from "../Switch";
 import {
@@ -20,9 +21,9 @@ const Header: FC = () => {
       </Logo>
 
       <StyledNav>
-        <StyledLink to="/shop">Shop</StyledLink>
+        <StyledLink to={ROUTES.shop}>Shop</StyledLink>
         <Switch />
-        <StyledIconCart to="/cart">
+        <StyledIconCart to={ROUTES.cart}>
           <IconSvgCart />
         </StyledIconCart>
       </StyledNav>

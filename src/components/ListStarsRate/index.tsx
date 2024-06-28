@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 import IconSVGStar from "@/assets/icon-star.svg";
-import { COUNT_RATE } from "@/constants/constants";
+import { COUNT_RATE } from "@/constants/detailCard";
 
 import { WrapperListStarsRate } from "./styled";
 import { ListStarsRateProps } from "./types";

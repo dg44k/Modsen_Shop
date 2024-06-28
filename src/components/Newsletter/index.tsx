@@ -1,12 +1,12 @@
 import emailjs from "@emailjs/browser";
 import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
-import { FC, FormEvent, FormEventHandler, useRef, useState } from "react";
+import { FC, useState } from "react";
 
 import {
   PUBLIC_KEY,
   SERVICE_ID_NEWSLETTER,
   TEMPLATE_ID_NEWSLETTER,
-} from "@/constants/constants";
+} from "@/constants/emailJS";
 
 import InfoModal from "../InfoModal";
 import { initialValues, NewsletterType, validationSchema } from "./helper";

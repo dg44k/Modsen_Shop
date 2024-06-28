@@ -1,6 +1,6 @@
 import * as yup from "yup";
 
-import { ContactUsType } from "@/pages/ContactUs/types/types";
+import { ContactUsType } from "@/pages/ContactUs/types";
 
 export const initialValue: ContactUsType = {
   firstName: "",

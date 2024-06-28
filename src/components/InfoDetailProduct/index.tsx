@@ -5,6 +5,8 @@ import IconSVGFacebook from "@/assets/icon-facebook.svg";
 import IconSVGInstagram from "@/assets/icon-instagram.svg";
 import IconSVGMail from "@/assets/icon-mail.svg";
 import IconSVGTwitter from "@/assets/icon-twitter.svg";
+import { LINK_PATHS } from "@/constants/linksPath";
+import { ROUTES } from "@/constants/routes";
 
 import Button from "../Button";
 import CounterProductCart from "../CounterProductCart";
@@ -44,16 +46,16 @@ const InfoDetailProduct: FC<InfoDetailProductProps> = ({ product }) => {
       </WrapperRatingProduct>
       <WrapperFooterInfoCard>
         <WrapperLinks>
-          <Link to="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDZBRCdHQvpnKPPQSvpLLCRnvtMKSrTXSMkBFQWGwWtRpbgHWkgWmQbDHRRWQNrXVpFJjWWs">
+          <Link to={LINK_PATHS.mail}>
             <IconSVGMail />
           </Link>
-          <Link to="https://www.facebook.com/ModsenSoftware/">
+          <Link to={LINK_PATHS.facebook}>
             <IconSVGFacebook />
           </Link>
-          <Link to="https://www.instagram.com/modsencompany/">
+          <Link to={LINK_PATHS.instagram}>
             <IconSVGInstagram />
           </Link>
-          <Link to="https://twitter.com/modsencompany?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+          <Link to={LINK_PATHS.twitter}>
             <IconSVGTwitter />
           </Link>
         </WrapperLinks>
@@ -63,7 +65,7 @@ const InfoDetailProduct: FC<InfoDetailProductProps> = ({ product }) => {
         <WrapperInfoCart>
           <CounterProductCart />
           <Button>
-            <Link to="/shop">ADD TO CART</Link>
+            <Link to={ROUTES.cart}>ADD TO CART</Link>
           </Button>
         </WrapperInfoCart>
       </WrapperFooterInfoCard>
